@@ -1,0 +1,129 @@
+{
+    "manufacturer": "WirenBoard",
+    "model": "WB-MR6C",
+    "services": [
+        {
+            "type": "ContactSensor",
+            "name": "Input",
+            "characteristics": [
+                {
+                    "type": "ContactSensorState",
+                    "link": {
+                        "type": "Integer",
+                        "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9])/meta/type",
+                        "topicGet": "/devices/(1)/controls/Input (2)"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "C_WaterMeter",
+            "name": "Counter",
+            "characteristics": [
+                {
+                    "type": "C_CubicMeter",
+                    "link": {
+                        "type": "Integer",
+                        "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]) counter/meta/type",
+                        "topicGet": "/devices/(1)/controls/Input (2) counter",
+                        "scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "type": "C_FrequencyMeter",
+            "name": "Frequency",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "C_Frequency",
+                    "link": {
+                        "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]) freq/meta/type",
+                        "topicGet": "/devices/(1)/controls/Input (2) freq",
+                        "scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "type": "C_WaterMeter",
+            "name": "Single Press Counter",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "C_CubicMeter",
+                    "link": {
+                        "type": "Integer",
+                        "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]) Single Press Counter/meta/type",
+                        "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter",
+                        "scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "type": "C_WaterMeter",
+            "name": "Long Press Counter",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "C_CubicMeter",
+                    "link": {
+                        "type": "Integer",
+                        "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]) Long Press Counter/meta/type",
+                        "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter",
+                        "scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "type": "C_WaterMeter",
+            "name": "Double Press Counter",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "C_CubicMeter",
+                    "link": {
+                        "type": "Integer",
+                        "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]) Double Press Counter/meta/type",
+                        "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter",
+                        "scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "type": "C_WaterMeter",
+            "name": "Shortlong Press Counter",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "C_CubicMeter",
+                    "link": {
+                        "type": "Integer",
+                        "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]) Shortlong Press Counter/meta/type",
+                        "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter",
+                        "scale": 1
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "K",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/K([0-9])/meta/type",
+                        "topicGet": "/devices/(1)/controls/K(2)",
+                        "topicSet": "/devices/(1)/controls/K(2)/on"
+                    }
+                }
+            ]
+        }
+    ]
+}
