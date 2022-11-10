@@ -1,0 +1,497 @@
+{
+    "name": "Универсальный датчик",
+    "manufacturer": "WirenBoard",
+    "model": "WB-MSWv3",
+    "services": [
+        {
+            "type": "TemperatureSensor",
+            "name": "Temperature",
+            "characteristics": [
+                {
+                    "type": "CurrentTemperature",
+                    "link": {
+                        "type": "Float",
+                        "topicSearch": "/devices/(wb-msw-v3_[0-9]{1,3})/controls/Temperature/meta/type",
+                        "topicGet": "/devices/(1)/controls/Temperature",
+                        "checkValue": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "HumiditySensor",
+            "name": "Humidity",
+            "characteristics": [
+                {
+                    "type": "CurrentRelativeHumidity",
+                    "link": {
+                        "type": "Float",
+                        "topicGet": "/devices/(1)/controls/Humidity",
+                        "checkValue": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "CarbonDioxideSensor",
+            "name": "CO2",
+            "logics": [
+                {
+                    "type": "CarbonDioxideDetectedFromCarbonDioxideLevel"
+                }
+            ],
+            "characteristics": [
+                {
+                    "type": "CarbonDioxideLevel",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/CO2",
+                        "minStep": 1,
+                        "checkValue": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "AirQualitySensor",
+            "name": "Air Quality (VOC)",
+            "logics": [
+                {
+                    "type": "AirQualityFromVOCDensity"
+                }
+            ],
+            "characteristics": [
+                {
+                    "type": "VOCDensity",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Air Quality (VOC)",
+                        "minStep": 1,
+                        "checkValue": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "C_NoiseSensor",
+            "name": "Sound Level",
+            "logics": [
+                {
+                    "type": "NoiseDetectedFromCurrentNoiseLevel"
+                }
+            ],
+            "characteristics": [
+                {
+                    "type": "C_CurrentNoiseLevel",
+                    "link": {
+                        "type": "Float",
+                        "topicGet": "/devices/(1)/controls/Sound Level",
+                        "minStep": 1,
+                        "checkValue": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "LightSensor",
+            "name": "Illuminance",
+            "characteristics": [
+                {
+                    "type": "CurrentAmbientLightLevel",
+                    "link": {
+                        "type": "Float",
+                        "topicGet": "/devices/(1)/controls/Illuminance",
+                        "minStep": 1,
+                        "checkValue": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "MotionSensor",
+            "name": "Max Motion",
+            "logics": [
+                {
+                    "type": "MotionDetectedFromCurrentMotionLevel"
+                }
+            ],
+            "characteristics": [
+                {
+                    "type": "MotionDetected",
+                    "data": {
+                        "SwitchOffDelay": 10
+                    }
+                },
+                {
+                    "type": "C_CurrentMotionLevel",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Max Motion",
+                        "minStep": 1,
+                        "checkValue": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "MotionSensor",
+            "name": "Current Motion",
+            "logics": [
+                {
+                    "type": "MotionDetectedFromCurrentMotionLevel"
+                }
+            ],
+            "characteristics": [
+                {
+                    "type": "MotionDetected",
+                    "data": {
+                        "SwitchOffDelay": 1
+                    }
+                },
+                {
+                    "type": "C_CurrentMotionLevel",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Current Motion",
+                        "minStep": 1,
+                        "checkValue": true
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "Buzzer",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Buzzer",
+                        "topicSet": "/devices/(1)/controls/Buzzer/on"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "Red LED",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Red LED",
+                        "topicSet": "/devices/(1)/controls/Red LED/on"
+                    }
+                }
+            ]
+        },
+        {
+            "type": "Switch",
+            "name": "Green LED",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Green LED",
+                        "topicSet": "/devices/(1)/controls/Green LED/on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "LED Period (s)",
+            "type": "Lightbulb",
+            "characteristics": [
+                {
+                    "type": "Brightness",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/LED Period (s)",
+                        "topicSet": "/devices/(1)/controls/LED Period (s)/on",
+                        "minStep": 10,
+                        "maxValue": 10
+                    }
+                }
+            ]
+        },
+        {
+            "name": "LED Glow Duration (ms)",
+            "type": "Lightbulb",
+            "characteristics": [
+                {
+                    "type": "Brightness",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/LED Glow Duration (ms)",
+                        "topicSet": "/devices/(1)/controls/LED Glow Duration (ms)/on",
+                        "minStep": 2,
+                        "maxValue": 50
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Learn to RAM",
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Learn to RAM",
+                        "topicSet": "/devices/(1)/controls/Learn to RAM/on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Play from RAM",
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Play from RAM",
+                        "topicSet": "/devices/(1)/controls/Play from RAM/on"
+                    },
+                    "data": {
+                        "SwitchOffTime": 150
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Learn to ROM1",
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Learn to ROM1",
+                        "topicSet": "/devices/(1)/controls/Learn to ROM1/on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Learn to ROM2",
+            "type": "Switch",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Learn to ROM2",
+                        "topicSet": "/devices/(1)/controls/Learn to ROM2/on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Learn to ROM3",
+            "type": "Switch",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Learn to ROM3",
+                        "topicSet": "/devices/(1)/controls/Learn to ROM3/on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Learn to ROM4",
+            "type": "Switch",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Learn to ROM4",
+                        "topicSet": "/devices/(1)/controls/Learn to ROM4/on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Learn to ROM5",
+            "type": "Switch",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Learn to ROM5",
+                        "topicSet": "/devices/(1)/controls/Learn to ROM5/on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Learn to ROM6",
+            "type": "Switch",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Learn to ROM6",
+                        "topicSet": "/devices/(1)/controls/Learn to ROM6/on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Learn to ROM7",
+            "type": "Switch",
+            "visible": false,
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Learn to ROM7",
+                        "topicSet": "/devices/(1)/controls/Learn to ROM7/on"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Play From ROM1",
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Play from ROM1",
+                        "topicSet": "/devices/(1)/controls/Play from ROM1/on"
+                    },
+                    "data": {
+                        "SwitchOffTime": 150
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Play From ROM2",
+            "visible": false,
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Play from ROM2",
+                        "topicSet": "/devices/(1)/controls/Play from ROM2/on"
+                    },
+                    "data": {
+                        "SwitchOffTime": 150
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Play From ROM3",
+            "visible": false,
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Play from ROM3",
+                        "topicSet": "/devices/(1)/controls/Play from ROM3/on"
+                    },
+                    "data": {
+                        "SwitchOffTime": 150
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Play From ROM4",
+            "visible": false,
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Play from ROM4",
+                        "topicSet": "/devices/(1)/controls/Play from ROM4/on"
+                    },
+                    "data": {
+                        "SwitchOffTime": 150
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Play From ROM5",
+            "visible": false,
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Play from ROM5",
+                        "topicSet": "/devices/(1)/controls/Play from ROM5/on"
+                    },
+                    "data": {
+                        "SwitchOffTime": 150
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Play From ROM6",
+            "visible": false,
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Play from ROM6",
+                        "topicSet": "/devices/(1)/controls/Play from ROM6/on"
+                    },
+                    "data": {
+                        "SwitchOffTime": 150
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Play From ROM7",
+            "visible": false,
+            "type": "Switch",
+            "characteristics": [
+                {
+                    "type": "On",
+                    "link": {
+                        "type": "Integer",
+                        "topicGet": "/devices/(1)/controls/Play from ROM7",
+                        "topicSet": "/devices/(1)/controls/Play from ROM7/on"
+                    },
+                    "data": {
+                        "SwitchOffTime": 150
+                    }
+                }
+            ]
+        }
+    ]
+}
