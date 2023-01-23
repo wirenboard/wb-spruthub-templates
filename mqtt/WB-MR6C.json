@@ -1,0 +1,210 @@
+[
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-MR6C",
+    "name": "Relay",
+    "services": [
+      {
+        "type": "Switch",
+        "characteristics": [
+          {
+            "type": "On",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
+              "topicGet": "/devices/(1)/controls/K(2)",
+              "topicSet": "/devices/(1)/controls/K(2)/on"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input",
+        "visible": false,
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2})/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Single Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Single Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Long Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Long Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Double Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Double Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Shortlong Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Shortlong Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-MR6C",
+    "name": "Input",
+    "services": [
+      {
+        "name": "Input",
+        "visible": false,
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0/meta/type",
+              "topicGet": "/devices/(1)/controls/Input 0"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input 0 Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Single Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Single Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input 0 Single Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Long Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Long Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input 0 Long Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Double Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Double Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input 0 Double Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Shortlong Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Shortlong Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input 0 Shortlong Press Counter"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
