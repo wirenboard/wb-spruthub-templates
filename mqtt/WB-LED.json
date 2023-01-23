@@ -1,0 +1,214 @@
+[
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-LED",
+    "name": "RGB Strip",
+    "services": [
+      {
+        "type": "Lightbulb",
+        "characteristics": [
+          {
+            "type": "On",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/(RGB Strip)/meta/type",
+              "topicGet": "/devices/(1)/controls/(2)",
+              "topicSet": "/devices/(1)/controls/(2)/on"
+            }
+          },
+          {
+            "type": "Brightness",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Brightness",
+              "topicSet": "/devices/(1)/controls/(2) Brightness/on"
+            }
+          },
+          {
+            "type": "Hue",
+            "link": {
+              "type": "RGB",
+              "format": "RGB",
+              "topicGet": "/devices/(1)/controls/RGB Palette",
+              "topicSet": "/devices/(1)/controls/RGB Palette/on"
+            }
+          },
+          {
+            "type": "Saturation",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Saturation",
+              "topicSet": "/devices/(1)/controls/(2) Saturation/on"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-LED",
+    "name": "White Strip",
+    "services": [
+      {
+        "name": "Белый канал",
+        "type": "Lightbulb",
+        "characteristics": [
+          {
+            "type": "On",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/(Channel.+[1-4_a-zA-Z ()]{1,}) Brightness/meta/type",
+              "topicGet": "/devices/(1)/controls/(2)",
+              "topicSet": "/devices/(1)/controls/(2)/on"
+            }
+          },
+          {
+            "type": "Brightness",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Brightness",
+              "topicSet": "/devices/(1)/controls/(2) Brightness/on"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-LED",
+    "name": "CCT Strip",
+    "services": [
+      {
+        "type": "Lightbulb",
+        "characteristics": [
+          {
+            "type": "On",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/(CCT[0-9]).([1-4_a-z ()]{1,})/meta/type",
+              "topicGet": "/devices/(1)/controls/(2) (3)",
+              "topicSet": "/devices/(1)/controls/(2) (3)/on"
+            }
+          },
+          {
+            "type": "Brightness",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Brightness",
+              "topicSet": "/devices/(1)/controls/(2) Brightness/on"
+            }
+          },
+          {
+            "type": "ColorTemperature",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Temperature",
+              "topicSet": "/devices/(1)/controls/(2) Temperature/on"
+            },
+            "maxValue": 100,
+            "minValue": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-LED",
+    "name": "Inputs",
+    "services": [
+      {
+        "name": "Input",
+        "visible": false,
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/Input ([0-9]{1,2})/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Single Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Single Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Long Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Long Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Double Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Double Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Input Shortlong Press Counter",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Shortlong Press Counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
