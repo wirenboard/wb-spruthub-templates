@@ -2,7 +2,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-LED",
-    "name": "RGB Strip",
+    "name": "Цветная лента",
     "services": [
       {
         "type": "Lightbulb",
@@ -48,7 +48,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-LED",
-    "name": "White Strip",
+    "name": "Белая лента",
     "services": [
       {
         "name": "Белый канал",
@@ -78,7 +78,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-LED",
-    "name": "CCT Strip",
+    "name": "Желто-белая лента",
     "services": [
       {
         "type": "Lightbulb",
@@ -117,10 +117,10 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-LED",
-    "name": "Inputs",
+    "name": "Входы",
     "services": [
       {
-        "name": "Input",
+        "name": "Вход",
         "visible": false,
         "type": "ContactSensor",
         "characteristics": [
@@ -135,7 +135,7 @@
         ]
       },
       {
-        "name": "Input Counter",
+        "name": "Счетчик",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -150,7 +150,7 @@
         ]
       },
       {
-        "name": "Input Single Press Counter",
+        "name": "Счетчик коротких нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -165,7 +165,7 @@
         ]
       },
       {
-        "name": "Input Long Press Counter",
+        "name": "Счетчик длинных нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -180,7 +180,7 @@
         ]
       },
       {
-        "name": "Input Double Press Counter",
+        "name": "Счетчик двойных нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -195,7 +195,7 @@
         ]
       },
       {
-        "name": "Input Shortlong Press Counter",
+        "name": "Счетчик коротких, а затем длинных нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [

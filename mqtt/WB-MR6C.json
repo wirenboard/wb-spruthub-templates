@@ -2,7 +2,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MR6C",
-    "name": "Relay",
+    "name": "Реле",
     "services": [
       {
         "type": "Switch",
@@ -19,7 +19,7 @@
         ]
       },
       {
-        "name": "Input",
+        "name": "Вход",
         "visible": false,
         "type": "ContactSensor",
         "characteristics": [
@@ -34,7 +34,7 @@
         ]
       },
       {
-        "name": "Input Counter",
+        "name": "Счетчик",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -49,7 +49,7 @@
         ]
       },
       {
-        "name": "Input Single Press Counter",
+        "name": "Счетчик коротких нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -64,7 +64,7 @@
         ]
       },
       {
-        "name": "Input Long Press Counter",
+        "name": "Счетчик длинных нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -79,7 +79,7 @@
         ]
       },
       {
-        "name": "Input Double Press Counter",
+        "name": "Счетчик двойных нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -94,7 +94,7 @@
         ]
       },
       {
-        "name": "Input Shortlong Press Counter",
+        "name": "Счетчик коротких, а затем длинных нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -113,10 +113,10 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MR6C",
-    "name": "Input",
+    "name": "Вход 0",
     "services": [
       {
-        "name": "Input",
+        "name": "Вход",
         "visible": false,
         "type": "ContactSensor",
         "characteristics": [
@@ -131,7 +131,7 @@
         ]
       },
       {
-        "name": "Input Counter",
+        "name": "Счетчик",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -146,7 +146,7 @@
         ]
       },
       {
-        "name": "Input Single Press Counter",
+        "name": "Счетчик коротких нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -161,7 +161,7 @@
         ]
       },
       {
-        "name": "Input Long Press Counter",
+        "name": "Счетчик длинных нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -176,7 +176,7 @@
         ]
       },
       {
-        "name": "Input Double Press Counter",
+        "name": "Счетчик двойных нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -191,7 +191,7 @@
         ]
       },
       {
-        "name": "Input Shortlong Press Counter",
+        "name": "Счетчик коротких, а затем длинных нажатий",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
