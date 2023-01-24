@@ -1,7 +1,7 @@
 [
   {
     "manufacturer": "Wiren Board",
-    "model": "WB-MR6C",
+    "model": "WB-MR3",
     "name": "Канал реле и дискретный вход",
     "services": [
       {
@@ -12,7 +12,7 @@
             "type": "On",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
               "topicGet": "/devices/(1)/controls/K(2)",
               "topicSet": "/devices/(1)/controls/K(2)/on"
             }
@@ -28,7 +28,7 @@
             "type": "ContactSensorState",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2})/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input ([0-9]{1,2})/meta/type",
               "topicGet": "/devices/(1)/controls/Input (2)"
             }
           }
@@ -43,7 +43,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input ([0-9]{1,2}) counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input (2) counter"
             }
           }
@@ -58,7 +58,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Single Press Counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Single Press Counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
             }
           }
@@ -73,7 +73,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Long Press Counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Long Press Counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
             }
           }
@@ -88,7 +88,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Double Press Counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Double Press Counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
             }
           }
@@ -103,7 +103,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Shortlong Press Counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Shortlong Press Counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
             }
           }
@@ -125,7 +125,7 @@
             "type": "ContactSensorState",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input 0/meta/type",
               "topicGet": "/devices/(1)/controls/Input 0"
             }
           }
@@ -140,7 +140,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input 0 counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input 0 counter"
             }
           }
@@ -155,7 +155,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Single Press Counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input 0 Single Press Counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input 0 Single Press Counter"
             }
           }
@@ -170,7 +170,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Long Press Counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input 0 Long Press Counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input 0 Long Press Counter"
             }
           }
@@ -185,7 +185,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Double Press Counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input 0 Double Press Counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input 0 Double Press Counter"
             }
           }
@@ -200,7 +200,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Shortlong Press Counter/meta/type",
+              "topicSearch": "/devices/(wb-mr3_[0-9]{1,3})/controls/Input 0 Shortlong Press Counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input 0 Shortlong Press Counter"
             }
           }

@@ -120,7 +120,7 @@
     "name": "Дискретный вход",
     "services": [
       {
-        "name": "Вход",
+        "name": "Состояние входа",
         "visible": false,
         "type": "ContactSensor",
         "characteristics": [

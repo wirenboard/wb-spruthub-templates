@@ -2,7 +2,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MDM3",
-    "name": "Диммер",
+    "name": "Канал диммера и дискретный вход",
     "services": [
       {
         "type": "Lightbulb",
@@ -27,7 +27,7 @@
         ]
       },
       {
-        "name": "Вход",
+        "name": "Состояние входа",
         "visible": false,
         "type": "ContactSensor",
         "characteristics": [
@@ -64,7 +64,7 @@
     "name": "Дискретный вход",
     "services": [
       {
-        "name": "Вход",
+        "name": "Состояние входа",
         "visible": false,
         "type": "ContactSensor",
         "characteristics": [

@@ -2,7 +2,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MR6C v.3",
-    "name": "Реле",
+    "name": "Канал реле и дискретный вход",
     "services": [
       {
         "name": "Реле",
@@ -20,7 +20,7 @@
         ]
       },
       {
-        "name": "Дискретный вход",
+        "name": "Состояние входа",
         "visible": false,
         "type": "ContactSensor",
         "characteristics": [
@@ -117,7 +117,7 @@
     "name": "Дискретный вход 0",
     "services": [
       {
-        "name": "Вход",
+        "name": "Состояние входа",
         "visible": false,
         "type": "ContactSensor",
         "characteristics": [
