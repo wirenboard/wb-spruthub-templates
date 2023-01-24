@@ -1,7 +1,7 @@
 [
   {
     "manufacturer": "Wiren Board",
-    "model": "WB-MR6C",
+    "model": "WB-MR6",
     "name": "Канал реле и дискретный вход",
     "services": [
       {
@@ -113,7 +113,7 @@
   },
   {
     "manufacturer": "Wiren Board",
-    "model": "WB-MR6C",
+    "model": "WB-MR6",
     "name": "Дискретный вход 0",
     "services": [
       {
