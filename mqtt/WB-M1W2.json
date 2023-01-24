@@ -1,5 +1,6 @@
 [
   {
+    "name": "Датчик температуры",
     "manufacturer": "Wiren Board",
     "model": "WB-M1W2",
     "services": [
@@ -14,6 +15,20 @@
               "topicGet": "/devices/(1)/controls/External Sensor (2)",
               "minStep": 0.5,
               "checkValue": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Датчик подключен",
+        "visible": false,
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/External Sensor (2) OK"
             }
           }
         ]
