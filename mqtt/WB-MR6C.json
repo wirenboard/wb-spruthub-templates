@@ -5,6 +5,7 @@
     "name": "Реле",
     "services": [
       {
+        "name": "Реле",
         "type": "Switch",
         "characteristics": [
           {
@@ -42,8 +43,8 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Counter/meta/type",
-              "topicGet": "/devices/(1)/controls/Input (2) Counter"
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input ([0-9]{1,2}) counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2) counter"
             }
           }
         ]
@@ -139,8 +140,8 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 Counter/meta/type",
-              "topicGet": "/devices/(1)/controls/Input 0 Counter"
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/Input 0 counter/meta/type",
+              "topicGet": "/devices/(1)/controls/Input 0 counter"
             }
           }
         ]
