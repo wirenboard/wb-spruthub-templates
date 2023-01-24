@@ -19,7 +19,7 @@
         ]
       },
       {
-        "name": "Вход",
+        "name": "Дискретный вход",
         "visible": false,
         "type": "ContactSensor",
         "characteristics": [
@@ -113,7 +113,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MR6C",
-    "name": "Вход 0",
+    "name": "Дискретный вход 0",
     "services": [
       {
         "name": "Вход",

@@ -117,7 +117,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MRGBW-D-fw3",
-    "name": "Входы",
+    "name": "Дискретный вход",
     "services": [
       {
         "name": "Вход",

@@ -117,7 +117,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-LED",
-    "name": "Входы",
+    "name": "Дискретный вход",
     "services": [
       {
         "name": "Вход",
