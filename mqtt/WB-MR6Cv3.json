@@ -108,7 +108,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MR6C v.3",
-    "name": "Дискретный вход 0",
+    "name": "Дискретный вход 0 и питание",
     "services": [
       {
         "name": "Состояние входа",
@@ -191,6 +191,21 @@
             "link": {
               "type": "float",
               "topicGet": "/devices/(1)/controls/Input 0 Shortlong Press Counter"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Питание на шине",
+        "visible": false,
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-mr6cv3_[0-9]{1,3})/controls/Bus Power Supply/meta/type",
+              "topicGet": "/devices/(1)/controls/Bus Power Supply"
             }
           }
         ]
