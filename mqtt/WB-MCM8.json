@@ -27,7 +27,6 @@
           "type": "C_PulseCount",
           "link": {
             "type": "float",
-            "topicSearch": "/devices/(wb-mcm8_[0-9]{1,3})/controls/Input ([0-9]{1,2}) counter/meta/type",
             "topicGet": "/devices/(1)/controls/Input (2) counter"
           }
         }
@@ -42,7 +41,6 @@
           "type": "C_PulseCount",
           "link": {
             "type": "float",
-            "topicSearch": "/devices/(wb-mcm8_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Single Press Counter/meta/type",
             "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
           }
         }
@@ -57,7 +55,6 @@
           "type": "C_PulseCount",
           "link": {
             "type": "float",
-            "topicSearch": "/devices/(wb-mcm8_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Long Press Counter/meta/type",
             "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
           }
         }
@@ -72,7 +69,6 @@
           "type": "C_PulseCount",
           "link": {
             "type": "float",
-            "topicSearch": "/devices/(wb-mcm8_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Double Press Counter/meta/type",
             "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
           }
         }
@@ -87,7 +83,6 @@
           "type": "C_PulseCount",
           "link": {
             "type": "float",
-            "topicSearch": "/devices/(wb-mcm8_[0-9]{1,3})/controls/Input ([0-9]{1,2}) Shortlong Press Counter/meta/type",
             "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
           }
         }

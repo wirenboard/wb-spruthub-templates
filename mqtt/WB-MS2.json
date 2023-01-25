@@ -119,7 +119,6 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-ms_[0-9]{1,3})/controls/Input ([0-9]) Counter/meta/type",
               "topicGet": "/devices/(1)/controls/Input (2) Counter"
             }
           }
