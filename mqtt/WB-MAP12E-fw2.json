@@ -6,7 +6,7 @@
     "services": [
       {
         "name": "Irms",
-        "visible": true,
+        "visible": false,
         "type": "C_AmpereMeter",
         "characteristics": [
           {
@@ -78,8 +78,7 @@
             "link": {
               "type": "float",
               "topicSearch": "/devices/(wb-map12e_[0-9]{1,3})/controls/Ch ([0-9]{1,2}) Total AP energy/meta/type",
-              "topicGet": "/devices/(1)/controls/Ch (2) Total AP energy",
-              "topicSet": "/devices/(1)/controls/Ch (2) Total AP energy/on"
+              "topicGet": "/devices/(1)/controls/Ch (2) Total AP energy"
             }
           }
         ]
@@ -93,8 +92,7 @@
             "type": "C_Volt",
             "link": {
               "type": "float",
-              "topicGet": "/devices/(1)/controls/Urms L(2)",
-              "topicSet": "/devices/(1)/controls/Urms L(2)/on"
+              "topicGet": "/devices/(1)/controls/Urms L(2)"
             }
           }
         ]
@@ -108,8 +106,7 @@
             "type": "C_Volt",
             "link": {
               "type": "float",
-              "topicGet": "/devices/(1)/controls/Upeak L(2)",
-              "topicSet": "/devices/(1)/controls/Upeak L(2)/on"
+              "topicGet": "/devices/(1)/controls/Upeak L(2)"
             }
           }
         ]
