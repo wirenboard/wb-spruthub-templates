@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Параметры электрической сети",
+    "manufacturer": "Wiren Board",
+    "model": "WB-MAP3EV",
+    "services": [
+      {
+        "name": "Urms",
+        "visible": true,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map3ev_[0-9]{1,3})/controls/Urms L([0-9]{1,2})/meta/type",
+              "topicGet": "/devices/(1)/controls/Urms L(2)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Upeak",
+        "visible": false,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Upeak L(2)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
