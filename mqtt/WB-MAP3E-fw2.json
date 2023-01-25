@@ -1,0 +1,105 @@
+[
+  {
+    "name": "Параметры электрической сети",
+    "manufacturer": "Wiren Board",
+    "model": "WB-MAP3E fw2",
+    "services": [
+      {
+        "name": "Urms",
+        "visible": true,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map3e_[0-9]{1,3})/controls/Urms L([0-9]{1,2})/meta/type",
+              "topicGet": "/devices/(1)/controls/Urms L(2)",
+              "topicSet": "/devices/(1)/controls/Urms L(2)/on"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Upeak",
+        "visible": false,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map3e_[0-9]{1,3})/controls/Upeak L(2)/meta/type",
+              "topicGet": "/devices/(1)/controls/Upeak L(2)",
+              "topicSet": "/devices/(1)/controls/Upeak L(2)/on"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Irms",
+        "visible": true,
+        "type": "C_AmpereMeter",
+        "characteristics": [
+          {
+            "type": "C_Ampere",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map3e_[0-9]{1,3})/controls/Irms L(2)/meta/type",
+              "topicGet": "/devices/(1)/controls/Irms L(2)",
+              "topicSet": "/devices/(1)/controls/Irms L(2)/on"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Ipeak",
+        "visible": false,
+        "type": "C_AmpereMeter",
+        "characteristics": [
+          {
+            "type": "C_Ampere",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map3e_[0-9]{1,3})/controls/Ipeak L(2)/meta/type",
+              "topicGet": "/devices/(1)/controls/Ipeak L(2)",
+              "topicSet": "/devices/(1)/controls/Ipeak L(2)/on"
+            }
+          }
+        ]
+      },
+      {
+        "name": "P",
+        "visible": true,
+        "type": "C_WattMeter",
+        "characteristics": [
+          {
+            "type": "C_Watt",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map3e_[0-9]{1,3})/controls/P L(2)/meta/type",
+              "topicGet": "/devices/(1)/controls/P L(2)",
+              "topicSet": "/devices/(1)/controls/P L(2)/on"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Энергия AP",
+        "visible": true,
+        "type": "C_KilowattHourMeter",
+        "characteristics": [
+          {
+            "type": "C_KilowattHour",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map3e_[0-9]{1,3})/controls/AP energy L(2)/meta/type",
+              "topicGet": "/devices/(1)/controls/AP energy L(2)",
+              "topicSet": "/devices/(1)/controls/AP energy L(2)/on"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
