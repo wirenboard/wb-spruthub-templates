@@ -6,6 +6,7 @@
     "services": [
       {
         "type": "TemperatureSensor",
+        "visible": false,
         "characteristics": [
           {
             "type": "CurrentTemperature",
