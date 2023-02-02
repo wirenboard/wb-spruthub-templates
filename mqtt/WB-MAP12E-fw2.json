@@ -1,6 +1,6 @@
 [
   {
-    "name": "Параметры электрической сети",
+    "name": "Параметры электросети",
     "manufacturer": "Wiren Board",
     "model": "WB-MAP12E fw2",
     "services": [
@@ -64,7 +64,7 @@
     ]
   },
   {
-    "name": "Параметры электрической сети",
+    "name": "Параметры электросети",
     "manufacturer": "Wiren Board",
     "model": "WB-MAP12E fw2",
     "services": [
