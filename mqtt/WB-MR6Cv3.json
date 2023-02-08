@@ -42,7 +42,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicGet": "/devices/(1)/controls/Input (2) Counter"
+              "topicGet": "/devices/(1)/controls/Input (2) counter"
             }
           }
         ]
@@ -134,7 +134,7 @@
             "type": "C_PulseCount",
             "link": {
               "type": "float",
-              "topicGet": "/devices/(1)/controls/(2) Counter"
+              "topicGet": "/devices/(1)/controls/(2) counter"
             }
           }
         ]
