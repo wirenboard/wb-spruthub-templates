@@ -1,6 +1,6 @@
 {
   "manufacturer": "Wiren Board",
-  "model": "WB-MRM2-mini",
+  "model": "WB-MRM2-mini-NC",
   "name": "Канал реле и дискретный вход",
   "services": [
     {
@@ -11,7 +11,7 @@
           "type": "On",
           "link": {
             "type": "Integer",
-            "topicSearch": "/devices/(wb-mrm2-mini_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
+            "topicSearch": "/devices/(wb-mrm2-mini-nc_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
             "topicGet": "/devices/(1)/controls/K(2)",
             "topicSet": "/devices/(1)/controls/K(2)/on"
           }
