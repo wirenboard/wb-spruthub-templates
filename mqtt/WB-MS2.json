@@ -1,0 +1,129 @@
+[
+  {
+    "name": "Комбинированный датчик",
+    "manufacturer": "Wiren Board",
+    "model": "WB-MS v.2",
+    "services": [
+      {
+        "type": "TemperatureSensor",
+        "characteristics": [
+          {
+            "type": "CurrentTemperature",
+            "link": {
+              "type": "Float",
+              "topicSearch": "/devices/(wb-ms_[0-9]{1,3})/controls/Temperature/meta/type",
+              "topicGet": "/devices/(1)/controls/Temperature",
+              "minStep": 0.5,
+              "checkValue": true
+            }
+          }
+        ]
+      },
+      {
+        "type": "HumiditySensor",
+        "characteristics": [
+          {
+            "type": "CurrentRelativeHumidity",
+            "link": {
+              "type": "Float",
+              "topicGet": "/devices/(1)/controls/Humidity",
+              "minStep": 5,
+              "checkValue": true
+            }
+          }
+        ]
+      },
+      {
+        "type": "LightSensor",
+        "characteristics": [
+          {
+            "type": "CurrentAmbientLightLevel",
+            "link": {
+              "type": "Float",
+              "topicGet": "/devices/(1)/controls/Illuminance",
+              "minStep": 5,
+              "checkValue": true
+            }
+          }
+        ]
+      },
+      {
+        "type": "AirQualitySensor",
+        "logics": [
+          {
+            "type": "AirQualityFromVOCDensity"
+          }
+        ],
+        "characteristics": [
+          {
+            "type": "VOCDensity",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Air Quality (VOC)",
+              "minStep": 10,
+              "checkValue": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-MS v.2",
+    "services": [
+      {
+        "visible": false,
+        "type": "TemperatureSensor",
+        "characteristics": [
+          {
+            "type": "CurrentTemperature",
+            "link": {
+              "type": "Float",
+              "topicSearch": "/devices/(wb-ms_[0-9]{1,3})/controls/External Sensor ([0-9])/meta/type",
+              "topicGet": "/devices/(1)/controls/External Sensor (2)",
+              "minStep": 0.5,
+              "checkValue": true
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-MS v.2",
+    "name": "Дискретный вход",
+    "services": [
+      {
+        "name": "Состояние входа",
+        "visible": false,
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-ms_[0-9]{1,3})/controls/Input ([0-9])/meta/type",
+              "topicGet": "/devices/(1)/controls/Input (2)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Счётчик",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Input (2) Counter"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

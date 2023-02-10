@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Датчик температуры",
+    "manufacturer": "Wiren Board",
+    "model": "WB-M1W2",
+    "services": [
+      {
+        "type": "TemperatureSensor",
+        "characteristics": [
+          {
+            "type": "CurrentTemperature",
+            "link": {
+              "type": "Float",
+              "topicSearch": "/devices/(wb-m1w2_[0-9]{1,3})/controls/External Sensor ([0-9])/meta/type",
+              "topicGet": "/devices/(1)/controls/External Sensor (2)",
+              "minStep": 0.5,
+              "checkValue": true
+            }
+          }
+        ]
+      },
+      {
+        "name": "Датчик подключен",
+        "visible": false,
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/External Sensor (2) OK"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-M1W2",
+    "name": "Дискретный вход",
+    "services": [
+      {
+        "name": "Состояние входа",
+        "visible": false,
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-m1w2_[0-9]{1,3})/controls/Discrete Input ([0-9])/meta/type",
+              "topicGet": "/devices/(1)/controls/Discrete Input (2)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Счётчик",
+        "visible": false,
+        "type": "C_PulseMeter",
+        "characteristics": [
+          {
+            "type": "C_PulseCount",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Counter (2)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

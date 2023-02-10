@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Параметры электросети",
+    "manufacturer": "Wiren Board",
+    "model": "WB-MAP6S fw2",
+    "services": [
+      {
+        "name": "Irms",
+        "visible": false,
+        "type": "C_AmpereMeter",
+        "characteristics": [
+          {
+            "type": "C_Ampere",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map6s_[0-9]{1,3})/controls/Irms ([0-9]{1,2})/meta/type",
+              "topicGet": "/devices/(1)/controls/Irms (2)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "P",
+        "visible": true,
+        "type": "C_WattMeter",
+        "characteristics": [
+          {
+            "type": "C_Watt",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/P (2)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Энергия AP",
+        "visible": true,
+        "type": "C_KilowattHourMeter",
+        "characteristics": [
+          {
+            "type": "C_KilowattHour",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/AP energy (2)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Параметры электросети",
+    "manufacturer": "Wiren Board",
+    "model": "WB-MAP6S fw2",
+    "services": [
+      {
+        "name": "Urms",
+        "visible": true,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map6s_[0-9]{1,3})/controls/(Urms)/meta/type",
+              "topicGet": "/devices/(1)/controls/(2)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

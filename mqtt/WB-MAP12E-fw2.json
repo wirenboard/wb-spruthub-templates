@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Параметры электросети",
+    "manufacturer": "Wiren Board",
+    "model": "WB-MAP12E fw2",
+    "services": [
+      {
+        "name": "Irms",
+        "visible": false,
+        "type": "C_AmpereMeter",
+        "characteristics": [
+          {
+            "type": "C_Ampere",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map12e_[0-9]{1,3})/controls/Ch ([0-9]{1,2}) Irms L([0-9]{1,2})/meta/type",
+              "topicGet": "/devices/(1)/controls/Ch (2) Irms L(3)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Ipeak",
+        "visible": false,
+        "type": "C_AmpereMeter",
+        "characteristics": [
+          {
+            "type": "C_Ampere",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Ch (2) Ipeak L(3)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "P",
+        "visible": true,
+        "type": "C_WattMeter",
+        "characteristics": [
+          {
+            "type": "C_Watt",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Ch (2) P L(3)"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Энергия AP",
+        "visible": true,
+        "type": "C_KilowattHourMeter",
+        "characteristics": [
+          {
+            "type": "C_KilowattHour",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Ch (2) AP energy L(3)"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "Параметры электросети",
+    "manufacturer": "Wiren Board",
+    "model": "WB-MAP12E fw2",
+    "services": [
+      {
+        "name": "Общая энергия AP Ch 1",
+        "visible": false,
+        "type": "C_KilowattHourMeter",
+        "characteristics": [
+          {
+            "type": "C_KilowattHour",
+            "link": {
+              "type": "float",
+              "topicSearch": "/devices/(wb-map12e_[0-9]{1,3})/controls/Ch 1 Total AP energy/meta/type",
+              "topicGet": "/devices/(1)/controls/Ch 1 Total AP energy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Общая энергия AP Ch 2",
+        "visible": false,
+        "type": "C_KilowattHourMeter",
+        "characteristics": [
+          {
+            "type": "C_KilowattHour",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Ch 2 Total AP energy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Общая энергия AP Ch 3",
+        "visible": false,
+        "type": "C_KilowattHourMeter",
+        "characteristics": [
+          {
+            "type": "C_KilowattHour",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Ch 3 Total AP energy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Общая энергия AP Ch 4",
+        "visible": false,
+        "type": "C_KilowattHourMeter",
+        "characteristics": [
+          {
+            "type": "C_KilowattHour",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Ch 4 Total AP energy"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Urms L1",
+        "visible": true,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Urms L1"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Upeak L1",
+        "visible": false,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Upeak L1"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Urms L2",
+        "visible": true,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Urms L2"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Upeak L2",
+        "visible": false,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Upeak L2"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Urms L3",
+        "visible": true,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Urms L3"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Upeak L3",
+        "visible": false,
+        "type": "C_VoltMeter",
+        "characteristics": [
+          {
+            "type": "C_Volt",
+            "link": {
+              "type": "float",
+              "topicGet": "/devices/(1)/controls/Upeak L3"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

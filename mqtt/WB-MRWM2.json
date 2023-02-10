@@ -1,0 +1,145 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MRWM2",
+  "name": "Канал реле и дискретный вход",
+  "services": [
+    {
+      "name": "Реле",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": {
+            "type": "Integer",
+            "topicSearch": "/devices/(wb-mrwm2_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
+            "topicGet": "/devices/(1)/controls/K(2)",
+            "topicSet": "/devices/(1)/controls/K(2)/on"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Состояние входа",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": {
+            "type": "Integer",
+            "topicGet": "/devices/(1)/controls/Input (2)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Счетчик",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": {
+            "type": "float",
+            "topicGet": "/devices/(1)/controls/Input (2) counter"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Счетчик коротких нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": {
+            "type": "float",
+            "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Счетчик длинных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": {
+            "type": "float",
+            "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Счетчик двойных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": {
+            "type": "float",
+            "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Счетчик коротких, а затем длинных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": {
+            "type": "float",
+            "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
+          }
+        }
+      ]
+    },
+    {
+      "name": "P",
+      "type": "C_WattMeter",
+      "characteristics": [
+        {
+          "type": "C_Watt",
+          "link": {
+            "type": "float",
+            "topicGet": "/devices/(1)/controls/P L(2)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Urms",
+      "type": "C_VoltMeter",
+      "characteristics": [
+        {
+          "type": "C_Volt",
+          "link": {
+            "type": "float",
+            "topicGet": "/devices/(1)/controls/Urms L(2)"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Энергия AP",
+      "visible": true,
+      "type": "C_KilowattHourMeter",
+      "characteristics": [
+        {
+          "type": "C_KilowattHour",
+          "link": {
+            "topicGet": "/devices/(1)/controls/AP energy L(2)"
+          }
+        }
+      ]
+    }
+  ]
+}
