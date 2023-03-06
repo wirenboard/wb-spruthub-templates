@@ -50,10 +50,10 @@
       {
         "name": "Счётчик 1",
         "visible": false,
-        "type": "C_WaterMeter",
+        "type": "C_PulseMeter",
         "characteristics": [
           {
-            "type": "C_CubicMeter",
+            "type": "C_PulseCount",
             "link": {
               "type": "float",
               "topicSearch": "/devices/(wb-mwac_[0-9]{1,3})/controls/P1 Counter/meta/type",
@@ -65,10 +65,10 @@
       {
         "name": "Счётчик 2",
         "visible": false,
-        "type": "C_WaterMeter",
+        "type": "C_PulseMeter",
         "characteristics": [
           {
-            "type": "C_CubicMeter",
+            "type": "C_PulseCount",
             "link": {
               "type": "float",
               "topicSearch": "/devices/(wb-mwac_[0-9]{1,3})/controls/P2 Counter/meta/type",
