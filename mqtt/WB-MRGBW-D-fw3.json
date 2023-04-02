@@ -105,10 +105,10 @@
             "link": {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/(2) Temperature",
-              "topicSet": "/devices/(1)/controls/(2) Temperature/on"
-            },
-            "maxValue": 100,
-            "minValue": 0
+              "topicSet": "/devices/(1)/controls/(2) Temperature/on",
+              "maxValue": 100,
+              "minValue": 0
+            }
           }
         ]
       }
