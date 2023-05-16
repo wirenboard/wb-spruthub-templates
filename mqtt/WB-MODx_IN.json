@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Дискретный вход",
+    "manufacturer": "Wiren Board",
+    "model": "WB-MOD Input",
+    "services": [
+      {
+        "name": "Состояние входа",
+        "type": "ContactSensor",
+        "characteristics": [
+          {
+            "type": "ContactSensorState",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-gpio)/controls/(MOD[0-4]{1,2})_(IN[0-3]{1,2})/meta/type",
+              "topicGet": "/devices/(1)/controls/(2)_(3)"
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
