@@ -97,17 +97,17 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MWAC v.2",
-    "name": "Датчик протечки",
+    "name": "Дискретный вход",
     "services": [
       {
-        "name": "Датчик протечки",
-        "type": "LeakSensor",
+        "name": "Состояние входа",
+        "type": "ContactSensor",
         "characteristics": [
           {
-            "type": "LeakDetected",
+            "type": "ContactSensorState",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/(Input F[0-9])/meta/type",
+              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/(Input [a-zA-Z][0-9]) Single Press Counter/meta/type",
               "topicGet": "/devices/(1)/controls/(2)"
             }
           }
@@ -188,24 +188,24 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MWAC v.2",
-    "name": "Дискретный вход",
+    "name": "Датчик протечки",
     "services": [
       {
-        "name": "Состояние входа",
-        "type": "ContactSensor",
+        "name": "Датчик протечки",
+        "type": "LeakSensor",
         "characteristics": [
           {
-            "type": "ContactSensorState",
+            "type": "LeakDetected",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/(Input S[0-9])/meta/type",
+              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/(Input [a-zA-Z][0-9])/meta/type",
               "topicGet": "/devices/(1)/controls/(2)"
             }
           }
         ]
       },
       {
-        "name": "Счётчик срабатываний входа",
+        "name": "Счётчик срабатываний датчика",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
@@ -214,62 +214,6 @@
             "link": {
               "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик коротких нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Single Press Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик длинных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Long Press Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик двойных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Double Press Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик коротких, а затем длинных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Shortlong Press Counter"
             }
           }
         ]
