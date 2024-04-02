@@ -13,7 +13,7 @@
             "type": "Active",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/Output K1/meta/type",
+              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/Output K1/meta",
               "topicGet": "/devices/(1)/controls/Output K1",
               "topicSet": "/devices/(1)/controls/Output K1/on"
             }
@@ -71,7 +71,7 @@
             "type": "C_CubicMeter",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/P1 Volume/meta/type",
+              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/P1 Volume/meta",
               "topicGet": "/devices/(1)/controls/P1 Volume"
             }
           }
@@ -86,7 +86,7 @@
             "type": "C_CubicMeter",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/P2 Volume/meta/type",
+              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/P2 Volume/meta",
               "topicGet": "/devices/(1)/controls/P2 Volume"
             }
           }
@@ -107,7 +107,7 @@
             "type": "ContactSensorState",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/(Input [a-zA-Z][0-9]) Single Press Counter/meta/type",
+              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/(Input [a-zA-Z][0-9]) Single Press Counter/meta",
               "topicGet": "/devices/(1)/controls/(2)"
             }
           }
@@ -198,7 +198,7 @@
             "type": "LeakDetected",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/(Input [a-zA-Z][0-9])/meta/type",
+              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/(Input [a-zA-Z][0-9])/meta",
               "topicGet": "/devices/(1)/controls/(2)"
             }
           }
