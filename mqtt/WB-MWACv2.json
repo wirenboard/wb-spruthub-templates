@@ -71,7 +71,6 @@
             "type": "C_CubicMeter",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/P1 Volume/meta",
               "topicGet": "/devices/(1)/controls/P1 Volume"
             }
           }
@@ -86,7 +85,6 @@
             "type": "C_CubicMeter",
             "link": {
               "type": "float",
-              "topicSearch": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/P2 Volume/meta",
               "topicGet": "/devices/(1)/controls/P2 Volume"
             }
           }
