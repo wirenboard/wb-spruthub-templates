@@ -1,7 +1,46 @@
-{
+[
+  {
+    "manufacturer": "Wiren Board",
+    "model": "WB-MRM2-mini",
+    "name": "Штора",
+    "catalogId": 378,
+    "services": [
+      {
+        "name": "Открыть",
+        "type": "Switch",
+        "characteristics": [
+          {
+            "type": "On",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-mrm2-mini_[0-9]{1,3})/controls/(Curtain [0-9]{1,2}) Open/meta",
+              "topicGet": "/devices/(1)/controls/(2) Open",
+              "topicSet": "/devices/(1)/controls/(2) Open/on"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Закрыть",
+        "type": "Switch",
+        "characteristics": [
+          {
+            "type": "On",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Close",
+              "topicSet": "/devices/(1)/controls/(2) Close/on"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
   "manufacturer": "Wiren Board",
   "model": "WB-MRM2-mini",
   "name": "Канал реле и дискретный вход",
+  "catalogId": 378,
   "services": [
     {
       "name": "Реле",
@@ -103,4 +142,5 @@
       ]
     }
   ]
-}
+ }
+]
