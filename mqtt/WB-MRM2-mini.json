@@ -50,7 +50,7 @@
             "type": "On",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mrm2-mini_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
+              "topicSearch": "/devices/(wb-mrm2-mini_[0-9]{1,3})/controls/K([0-9]{1,2})/meta",
               "topicGet": "/devices/(1)/controls/K(2)",
               "topicSet": "/devices/(1)/controls/K(2)/on"
             }
@@ -142,5 +142,5 @@
         ]
       }
     ]
- }
+  }
 ]
