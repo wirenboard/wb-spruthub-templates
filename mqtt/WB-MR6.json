@@ -1,8 +1,46 @@
 [
   {
     "manufacturer": "Wiren Board",
+    "model": "WB-MR3",
+    "name": "Штора",
+    "catalogId": 374,
+    "services": [
+      {
+        "name": "Открыть",
+        "type": "Switch",
+        "characteristics": [
+          {
+            "type": "On",
+            "link": {
+              "type": "Integer",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/(Curtain [0-9]{1,2}) Open/meta",
+              "topicGet": "/devices/(1)/controls/(2) Open",
+              "topicSet": "/devices/(1)/controls/(2) Open/on"
+            }
+          }
+        ]
+      },
+      {
+        "name": "Закрыть",
+        "type": "Switch",
+        "characteristics": [
+          {
+            "type": "On",
+            "link": {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Close",
+              "topicSet": "/devices/(1)/controls/(2) Close/on"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "manufacturer": "Wiren Board",
     "model": "WB-MR6",
     "name": "Канал реле и дискретный вход",
+    "catalogId": 374,
     "services": [
       {
         "name": "Реле",
@@ -12,7 +50,7 @@
             "type": "On",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/K([0-9]{1,2})/meta",
               "topicGet": "/devices/(1)/controls/K(2)",
               "topicSet": "/devices/(1)/controls/K(2)/on"
             }
@@ -109,6 +147,7 @@
     "manufacturer": "Wiren Board",
     "model": "WB-MR6",
     "name": "Дискретный вход 0",
+    "catalogId": 374,
     "services": [
       {
         "name": "Состояние входа",
@@ -119,7 +158,7 @@
             "type": "ContactSensorState",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/(Input 0)/meta/type",
+              "topicSearch": "/devices/(wb-mr6c_[0-9]{1,3})/controls/(Input 0)/meta",
               "topicGet": "/devices/(1)/controls/(2)"
             }
           }
