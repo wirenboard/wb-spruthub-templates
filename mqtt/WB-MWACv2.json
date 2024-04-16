@@ -112,7 +112,7 @@
         ]
       },
       {
-        "name": "Счётчик срабатываний датчика",
+        "name": "Счётчик срабатываний входа",
         "visible": false,
         "type": "C_PulseMeter",
         "characteristics": [
