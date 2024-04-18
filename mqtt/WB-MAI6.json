@@ -28,50 +28,6 @@
     "catalogId": 4000,
     "services": [
       {
-        "name": "Ток",
-        "type": "C_AmpereMeter",
-        "characteristics": [
-          {
-            "type": "C_Ampere",
-            "link": {
-              "type": "Double",
-              "topicSearch": "/devices/(wb-mai6_[0-9]{1,3})/controls/(IN [0-9]{1,2}.?[PN]* Current)/meta",
-              "topicGet": "/devices/(1)/controls/(2)",
-              "checkValue": true
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "manufacturer": "WirenBoard",
-    "model": "WB-MAI6",
-    "catalogId": 4000,
-    "services": [
-      {
-        "name": "Напряжение",
-        "type": "C_VoltMeter",
-        "characteristics": [
-          {
-            "type": "C_Volt",
-            "link": {
-              "type": "Double",
-              "topicSearch": "/devices/(wb-mai6_[0-9]{1,3})/controls/(IN [0-9]{1,2}.?[PN]* Voltage)/meta",
-              "topicGet": "/devices/(1)/controls/(2)",
-              "checkValue": true
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "manufacturer": "WirenBoard",
-    "model": "WB-MAI6",
-    "catalogId": 4000,
-    "services": [
-      {
         "name": "Сухой контакт",
         "type": "ContactSensor",
         "characteristics": [
