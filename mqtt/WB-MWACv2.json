@@ -70,7 +70,7 @@
           {
             "type": "C_CubicMeter",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/P1 Volume"
             }
           }
@@ -84,7 +84,7 @@
           {
             "type": "C_CubicMeter",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/P2 Volume"
             }
           }
