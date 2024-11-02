@@ -3,6 +3,7 @@
     "manufacturer": "Wiren Board",
     "model": "WB-LED",
     "name": "Цветная лента",
+    "catalogId": 3979,
     "services": [
       {
         "type": "Lightbulb",
@@ -142,7 +143,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Counter"
             }
           }
@@ -156,7 +157,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Single Press Counter"
             }
           }
@@ -170,7 +171,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Long Press Counter"
             }
           }
@@ -184,7 +185,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Double Press Counter"
             }
           }
@@ -198,7 +199,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Shortlong Press Counter"
             }
           }
