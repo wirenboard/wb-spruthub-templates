@@ -3,6 +3,7 @@
     "name": "Дискретный выход",
     "manufacturer": "Wiren Board",
     "model": "WB-MOD Relay",
+    "catalogId": 4392,
     "services": [
       {
         "name": "Реле",
