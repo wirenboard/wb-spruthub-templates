@@ -3,6 +3,7 @@
     "name": "Параметры электросети",
     "manufacturer": "Wiren Board",
     "model": "WB-MAP3E fw2",
+    "catalogId": 3209,
     "services": [
       {
         "name": "Urms",
@@ -12,7 +13,7 @@
           {
             "type": "C_Volt",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicSearch": "/devices/(wb-map3(?:e_|et_)[0-9]{1,3})/controls/Urms L([0-9]{1,2})/meta/type",
               "topicGet": "/devices/(1)/controls/Urms L(2)"
             }
@@ -27,7 +28,7 @@
           {
             "type": "C_Volt",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Upeak L(2)"
             }
           }
@@ -41,7 +42,7 @@
           {
             "type": "C_Ampere",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Irms L(2)"
             }
           }
@@ -55,7 +56,7 @@
           {
             "type": "C_Ampere",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Ipeak L(2)"
             }
           }
@@ -69,7 +70,7 @@
           {
             "type": "C_Watt",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/P L(2)"
             }
           }
@@ -78,12 +79,12 @@
       {
         "name": "Энергия AP",
         "visible": true,
-        "type": "C_KilowattHourMeter",
+        "type": "C_KiloWattHourMeter",
         "characteristics": [
           {
-            "type": "C_KilowattHour",
+            "type": "C_KiloWattHour",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/AP energy L(2)"
             }
           }
@@ -104,7 +105,7 @@
           {
             "type": "C_Watt",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicSearch": "/devices/(wb-map3(?:e_|et_)[0-9]{1,3})/controls/(Total P)/meta/type",
               "topicGet": "/devices/(1)/controls/(2)"
             }
@@ -114,12 +115,12 @@
       {
         "name": "Энергия AP",
         "visible": false,
-        "type": "C_KilowattHourMeter",
+        "type": "C_KiloWattHourMeter",
         "characteristics": [
           {
-            "type": "C_KilowattHour",
+            "type": "C_KiloWattHour",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Total AP energy"
             }
           }
