@@ -3,6 +3,7 @@
     "manufacturer": "Wiren Board",
     "model": "WB-MR6C-NC",
     "name": "Канал реле и дискретный вход",
+    "catalogId": 3206,
     "services": [
       {
         "name": "Реле",
@@ -41,7 +42,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) counter"
             }
           }
@@ -55,7 +56,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
             }
           }
@@ -69,7 +70,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
             }
           }
@@ -83,7 +84,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
             }
           }
@@ -97,7 +98,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
             }
           }
@@ -133,7 +134,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) counter"
             }
           }
@@ -147,7 +148,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Single Press Counter"
             }
           }
@@ -161,7 +162,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Long Press Counter"
             }
           }
@@ -175,7 +176,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Double Press Counter"
             }
           }
@@ -189,7 +190,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Shortlong Press Counter"
             }
           }
