@@ -3,6 +3,7 @@
     "name": "Датчик температуры",
     "manufacturer": "Wiren Board",
     "model": "WB-MIR v.2",
+    "catalogId": 3213,
     "services": [
       {
         "type": "TemperatureSensor",
@@ -11,7 +12,7 @@
           {
             "type": "CurrentTemperature",
             "link": {
-              "type": "Float",
+              "type": "Double",
               "topicSearch": "/devices/(wb-mir_v2_[0-9]{1,3})/controls/External Temperature Sensor/meta/type",
               "topicGet": "/devices/(1)/controls/External Temperature Sensor",
               "minStep": 0.5,
@@ -55,7 +56,7 @@
               "topicSet": "/devices/(1)/controls/Play from ROM(2)/on"
             },
             "data": {
-              "SwitchOffTime": 100
+              "SwitchOffTime": 0.1
             }
           }
         ]
