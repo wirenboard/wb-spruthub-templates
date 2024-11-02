@@ -1,0 +1,22 @@
+{
+  "name": "Напряжение",
+  "manufacturer": "WirenBoard",
+  "model": "WBIO-DI-IN",
+  "services": [
+    {
+      "name": "Напряжение",
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": {
+            "type": "Integer",
+            "topicSearch": "/devices/(wb-gpio)/controls/(EXT[0-9]_IN[0-9]{1,2})/meta/type",
+            "topicGet": "/devices/(1)/controls/(2)",
+            "topicSet": "/devices/(1)/controls/(2)/on"
+          }
+        }
+      ]
+    }
+  ]
+}

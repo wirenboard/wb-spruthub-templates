@@ -1,0 +1,32 @@
+{
+  "manufacturer": "WirenBoard",
+  "model": "WBIO-DO-R10R-4",
+  "services": [
+    {
+      "type": "WindowCovering",
+      "logics": [
+        {
+          "type": "TimerBasedPositionState",
+          "options": {
+            "WarmingUpTime": "1000",
+            "MovingTime": "15000"
+          }
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "C_TargetPositionState",
+          "link": {
+            "type": "Integer",
+            "format": "WBCovering",
+            "events": false,
+            "write": true,
+            "topicSearch": "/devices/(wb-mio-gpio_[0-9]{1,3}:[0-9]{1,3})/controls/DIR([0-9]{1,2})/meta/type",
+            "topicGet": "/devices/(1)/controls/DIR(2)",
+            "topicSet": "/devices/(1)/controls/DIR(2)/on"
+          }
+        }
+      ]
+    }
+  ]
+}
