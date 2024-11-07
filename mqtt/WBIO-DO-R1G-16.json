@@ -1,0 +1,20 @@
+{
+  "manufacturer": "WirenBoard",
+  "model": "WBIO-DO-R1G/SSR",
+  "services": [
+    {
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": {
+            "type": "Integer",
+            "topicSearch": "/devices/(wb-gpio)/controls/(EXT[0-9]_K[0-9]{1,2})/meta/type",
+            "topicGet": "/devices/(1)/controls/(2)",
+            "topicSet": "/devices/(1)/controls/(2)/on"
+          }
+        }
+      ]
+    }
+  ]
+}

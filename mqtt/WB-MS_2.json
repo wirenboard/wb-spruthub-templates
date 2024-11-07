@@ -1,0 +1,100 @@
+{
+  "name": "Комбинированный датчик",
+  "manufacturer": "WirenBoard",
+  "model": "WB-MS v.2",
+  "services": [
+    {
+      "type": "TemperatureSensor",
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": {
+            "type": "Double",
+            "topicSearch": "/devices/(wb-ms_[0-9]{1,3})/controls/Temperature/meta/type",
+            "topicGet": "/devices/(1)/controls/Temperature",
+            "minStep": 0.5,
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "HumiditySensor",
+      "characteristics": [
+        {
+          "type": "CurrentRelativeHumidity",
+          "link": {
+            "type": "Double",
+            "topicGet": "/devices/(1)/controls/Humidity",
+            "minStep": 5,
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "LightSensor",
+      "characteristics": [
+        {
+          "type": "CurrentAmbientLightLevel",
+          "link": {
+            "type": "Double",
+            "topicGet": "/devices/(1)/controls/Illuminance",
+            "minStep": 5,
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "type": "AirQualitySensor",
+      "logics": [
+        {
+          "type": "AirQualityFromVOCDensity"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "VOCDensity",
+          "link": {
+            "type": "Integer",
+            "topicGet": "/devices/(1)/controls/Air Quality (VOC)",
+            "minStep": 10,
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "visible": false,
+      "type": "TemperatureSensor",
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": {
+            "type": "Double",
+            "topicGet": "/devices/(1)/controls/External Sensor 1",
+            "minStep": 0.5,
+            "checkValue": true
+          }
+        }
+      ]
+    },
+    {
+      "visible": false,
+      "type": "TemperatureSensor",
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": {
+            "type": "Double",
+            "topicGet": "/devices/(1)/controls/External Sensor 2",
+            "minStep": 0.5,
+            "checkValue": true
+          }
+        }
+      ]
+    }
+  ]
+}
+

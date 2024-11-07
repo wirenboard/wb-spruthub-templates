@@ -1,0 +1,21 @@
+{
+  "name": "Аккумулятор",
+  "manufacturer": "WirenBoard",
+  "model": "System",
+  "services": [
+    {
+      "name": "Аккумулятор",
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": {
+            "type": "Integer",
+            "topicSearch": "/devices/(power_status)/controls/working on battery/meta/type",
+            "topicGet": "/devices/(1)/controls/working on battery"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "manufacturer": "WirenBoard",
+  "model": "WBIO-DO-HS-8",
+  "services": [
+    {
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": {
+            "type": "Integer",
+            "topicSearch": "/devices/(wb-gpio)/controls/(EXT[0-9]_HS[0-9]{1,2})/meta/type",
+            "topicGet": "/devices/(1)/controls/(2)",
+            "topicSet": "/devices/(1)/controls/(2)/on"
+          }
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,0 +1,20 @@
+{
+  "manufacturer": "WirenBoard",
+  "model": "WBIO-AI-DV-12/4-20mA",
+  "visible": false,
+  "services": [
+    {
+      "type": "C_VoltMeter",
+      "characteristics": [
+        {
+          "type": "C_Volt",
+          "link": {
+            "type": "Integer",
+            "topicSearch": "/devices/(wb-adc)/controls/(EXT[0-9]_A[0-9]{1,2})/meta/type",
+            "topicGet": "/devices/(1)/controls/(2)"
+          }
+        }
+      ]
+    }
+  ]
+}
