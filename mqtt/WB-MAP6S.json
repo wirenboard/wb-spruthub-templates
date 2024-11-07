@@ -3,6 +3,7 @@
     "name": "Параметры электросети",
     "manufacturer": "Wiren Board",
     "model": "WB-MAP6S fw2",
+    "catalogId": 1646,
     "services": [
       {
         "name": "Irms",
@@ -12,7 +13,7 @@
           {
             "type": "C_Ampere",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicSearch": "/devices/(wb-map6s_[0-9]{1,3})/controls/Irms ([0-9]{1,2})/meta/type",
               "topicGet": "/devices/(1)/controls/Irms (2)"
             }
@@ -27,7 +28,7 @@
           {
             "type": "C_Watt",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/P (2)"
             }
           }
@@ -36,12 +37,12 @@
       {
         "name": "Энергия AP",
         "visible": true,
-        "type": "C_KilowattHourMeter",
+        "type": "C_KiloWattHourMeter",
         "characteristics": [
           {
-            "type": "C_KilowattHour",
+            "type": "C_KiloWattHour",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/AP energy (2)"
             }
           }
@@ -62,7 +63,7 @@
           {
             "type": "C_Volt",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicSearch": "/devices/(wb-map6s_[0-9]{1,3})/controls/(Urms)/meta/type",
               "topicGet": "/devices/(1)/controls/(2)"
             }

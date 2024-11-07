@@ -3,6 +3,7 @@
     "name": "Дискретный вход",
     "manufacturer": "Wiren Board",
     "model": "WB-MOD Input",
+    "catalogId": 4393,
     "services": [
       {
         "name": "Состояние входа",

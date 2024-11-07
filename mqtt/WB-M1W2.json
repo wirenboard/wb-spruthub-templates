@@ -3,6 +3,7 @@
     "name": "Датчик температуры",
     "manufacturer": "Wiren Board",
     "model": "WB-M1W2",
+    "catalogId": 72,
     "services": [
       {
         "type": "TemperatureSensor",
@@ -10,7 +11,7 @@
           {
             "type": "CurrentTemperature",
             "link": {
-              "type": "Float",
+              "type": "Double",
               "topicSearch": "/devices/(wb-m1w2_[0-9]{1,3})/controls/External Sensor ([0-9])/meta/type",
               "topicGet": "/devices/(1)/controls/External Sensor (2)",
               "minStep": 0.5,
@@ -42,15 +43,14 @@
     "services": [
       {
         "name": "Состояние входа",
-        "visible": false,
         "type": "ContactSensor",
         "characteristics": [
           {
             "type": "ContactSensorState",
             "link": {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-m1w2_[0-9]{1,3})/controls/Discrete Input ([0-9])/meta/type",
-              "topicGet": "/devices/(1)/controls/Discrete Input (2)"
+              "topicSearch": "/devices/(wb-m1w2_[0-9]{1,3})/controls/(Input [0-9])/meta/type",
+              "topicGet": "/devices/(1)/controls/(2)"
             }
           }
         ]
@@ -63,8 +63,8 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
-              "topicGet": "/devices/(1)/controls/Counter (2)"
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) counter"
             }
           }
         ]

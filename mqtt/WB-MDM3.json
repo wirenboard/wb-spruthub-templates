@@ -2,7 +2,7 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MDM3",
-    "name": "Канал диммера",
+    "name": "Канал диммера и дискретный вход",
     "catalogId": 68,
     "services": [
       {

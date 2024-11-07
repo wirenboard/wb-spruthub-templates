@@ -3,6 +3,7 @@
     "name": "Комбинированный датчик",
     "manufacturer": "Wiren Board",
     "model": "WB-MS v.2",
+    "catalogId": 74,
     "services": [
       {
         "type": "TemperatureSensor",
@@ -10,7 +11,7 @@
           {
             "type": "CurrentTemperature",
             "link": {
-              "type": "Float",
+              "type": "Double",
               "topicSearch": "/devices/(wb-ms_[0-9]{1,3})/controls/Temperature/meta/type",
               "topicGet": "/devices/(1)/controls/Temperature",
               "minStep": 0.5,
@@ -25,7 +26,7 @@
           {
             "type": "CurrentRelativeHumidity",
             "link": {
-              "type": "Float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Humidity",
               "minStep": 5,
               "checkValue": true
@@ -39,7 +40,7 @@
           {
             "type": "CurrentAmbientLightLevel",
             "link": {
-              "type": "Float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Illuminance",
               "minStep": 5,
               "checkValue": true
@@ -79,7 +80,7 @@
           {
             "type": "CurrentTemperature",
             "link": {
-              "type": "Float",
+              "type": "Double",
               "topicSearch": "/devices/(wb-ms_[0-9]{1,3})/controls/External Sensor ([0-9])/meta/type",
               "topicGet": "/devices/(1)/controls/External Sensor (2)",
               "minStep": 0.5,
@@ -118,7 +119,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) Counter"
             }
           }

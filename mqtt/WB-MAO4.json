@@ -2,7 +2,8 @@
   {
     "manufacturer": "Wiren Board",
     "model": "WB-MAO4",
-    "name": "Выход 0-10 В",
+    "name": "Выход 0-10 В и дискретный вход",
+    "catalogId": 70,
     "services": [
       {
         "type": "Lightbulb",
@@ -80,7 +81,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Counter"
             }
           }
@@ -94,7 +95,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Short Press Counter"
             }
           }
@@ -108,7 +109,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Long Press Counter"
             }
           }
@@ -122,7 +123,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Double Press Counter"
             }
           }
@@ -136,7 +137,7 @@
           {
             "type": "C_PulseCount",
             "link": {
-              "type": "float",
+              "type": "Double",
               "topicGet": "/devices/(1)/controls/(2) Short Long Press Counter"
             }
           }
