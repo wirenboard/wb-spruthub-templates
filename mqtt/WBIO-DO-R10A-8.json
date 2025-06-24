@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WBIO-DO-R10A-8",
   "modelId": "/devices/(wb-gpio)/controls/(EXT[0-9]_R3A[0-9]{1,2})/meta/type",
   "services": [
