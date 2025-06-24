@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WBIO-AO-10V-8",
   "modelId": "/devices/(wb-dac)/controls/(EXT[0-9]_O[0-9]{1,2})/meta/type",
   "services": [
