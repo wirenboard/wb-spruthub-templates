@@ -1,0 +1,34 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MAO4",
+  "modelId": "/devices/(wb-mao4_[0-9]{1,3})/controls/(Channel [0-9]) Switch/meta/type",
+  "name": "Диммер 0-10 В",
+  "services": [
+    {
+      "type": "Lightbulb",
+      "name": "Выход",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Switch",
+              "topicSet": "/devices/(1)/controls/(2) Switch/on"
+            }
+          ]
+        },
+        {
+          "type": "Brightness",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Dimming Level",
+              "topicSet": "/devices/(1)/controls/(2) Dimming Level/on"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

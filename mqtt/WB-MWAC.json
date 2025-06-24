@@ -1,159 +1,115 @@
-[
-  {
-    "name": "Защита от протечки",
-    "manufacturer": "Wiren Board",
-    "model": "WB-MWAC",
-    "catalogId": 381,
-    "services": [
-      {
-        "name": "Кран 1",
-        "type": "Valve",
-        "characteristics": [
-          {
-            "type": "Active",
-            "link": {
+{
+  "name": "Защита от протечки",
+  "manufacturer": "Wiren Board",
+  "model": "WB-MWAC",
+  "modelId": "/devices/(wb-mwac_[0-9]{1,3})/controls/K1/meta/type",
+  "catalogId": 381,
+  "services": [
+    {
+      "name": "Кран 1",
+      "type": "Valve",
+      "logics": [
+        {
+          "type": "InUseFromActive"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "Active",
+          "link": [
+            {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mwac_[0-9]{1,3})/controls/K1/meta/type",
               "topicGet": "/devices/(1)/controls/K1",
               "topicSet": "/devices/(1)/controls/K1/on"
             }
-          }
-        ]
-      },
-      {
-        "name": "Кран 2",
-        "type": "Valve",
-        "characteristics": [
-          {
-            "type": "Active",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Кран 2",
+      "type": "Valve",
+      "logics": [
+        {
+          "type": "InUseFromActive"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "Active",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/K2",
               "topicSet": "/devices/(1)/controls/K2/on"
             }
-          }
-        ]
-      },
-      {
-        "name": "Сирена",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Сирена",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/Alarm",
               "topicSet": "/devices/(1)/controls/Alarm/on"
             }
-          }
-        ]
-      },
-      {
-        "name": "Режим: влажная уборка",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Режим: влажная уборка",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/Cleaning Mode",
               "topicSet": "/devices/(1)/controls/Cleaning Mode/on"
             }
-          }
-        ]
-      },
-      {
-        "name": "Счётчик 1",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счётчик 1",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
               "type": "Double",
-              "topicSearch": "/devices/(wb-mwac_[0-9]{1,3})/controls/P1 Counter/meta/type",
               "topicGet": "/devices/(1)/controls/P1 Counter"
             }
-          }
-        ]
-      },
-      {
-        "name": "Счётчик 2",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счётчик 2",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
               "type": "Double",
-              "topicSearch": "/devices/(wb-mwac_[0-9]{1,3})/controls/P2 Counter/meta/type",
               "topicGet": "/devices/(1)/controls/P2 Counter"
             }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-MWAC",
-    "services": [
-      {
-        "name": "Датчик протечки",
-        "type": "LeakSensor",
-        "characteristics": [
-          {
-            "type": "LeakDetected",
-            "link": {
-              "type": "Integer",
-              "topicSearch": "/devices/(wb-mwac_[0-9]{1,3})/controls/F([0-9])/meta/type",
-              "topicGet": "/devices/(1)/controls/F(2)"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счётчик срабатываний датчика",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/F(2) Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Дискретный вход",
-        "visible": false,
-        "type": "ContactSensor",
-        "characteristics": [
-          {
-            "type": "ContactSensorState",
-            "link": {
-              "type": "Integer",
-              "topicGet": "/devices/(1)/controls/S(2)"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счётчик срабатываний входа",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/S(2) Counter"
-            }
-          }
-        ]
-      }
-    ]
-  }
-]
+          ]
+        }
+      ]
+    }
+  ]
+}

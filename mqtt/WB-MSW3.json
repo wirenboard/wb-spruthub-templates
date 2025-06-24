@@ -1,203 +1,195 @@
-[
-  {
-    "name": "Универсальный датчик",
-    "manufacturer": "Wiren Board",
-    "model": "WB-MSW3",
-    "catalogId": 71,
-    "services": [
-      {
-        "type": "TemperatureSensor",
-        "characteristics": [
-          {
-            "type": "CurrentTemperature",
-            "link": {
+{
+  "name": "Универсальный датчик",
+  "manufacturer": "Wiren Board",
+  "model": "WB-MSW3",
+  "modelId": "/devices/(wb-msw-v3_[0-9]{1,3})/controls/Temperature/meta/type",
+  "catalogId": 71,
+  "services": [
+    {
+      "type": "TemperatureSensor",
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
               "type": "Double",
-              "topicSearch": "/devices/(wb-msw-v3_[0-9]{1,3})/controls/Temperature/meta/type",
               "topicGet": "/devices/(1)/controls/Temperature",
               "minStep": 0.1,
               "checkValue": true
             }
-          }
-        ]
-      },
-      {
-        "type": "HumiditySensor",
-        "characteristics": [
-          {
-            "type": "CurrentRelativeHumidity",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "type": "HumiditySensor",
+      "characteristics": [
+        {
+          "type": "CurrentRelativeHumidity",
+          "link": [
+            {
               "type": "Double",
               "topicGet": "/devices/(1)/controls/Humidity",
               "minStep": 1,
               "checkValue": true
             }
-          }
-        ]
-      },
-      {
-        "type": "AirQualitySensor",
-        "logics": [
-          {
-            "type": "AirQualityFromVOCDensity"
-          }
-        ],
-        "characteristics": [
-          {
-            "type": "VOCDensity",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "type": "AirQualitySensor",
+      "logics": [
+        {
+          "type": "AirQualityFromVOCDensity"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "VOCDensity",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/Air Quality (VOC)",
               "minStep": 10,
               "checkValue": true
             }
-          }
-        ]
-      },
-      {
-        "type": "CarbonDioxideSensor",
-        "logics": [
-          {
-            "type": "CarbonDioxideDetectedFromCarbonDioxideLevel"
-          }
-        ],
-        "characteristics": [
-          {
-            "type": "CarbonDioxideLevel",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "type": "CarbonDioxideSensor",
+      "logics": [
+        {
+          "type": "CarbonDioxideDetectedFromCarbonDioxideLevel"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "CarbonDioxideLevel",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/CO2",
               "minStep": 10,
               "checkValue": true
             }
-          }
-        ]
-      },
-      {
-        "type": "LightSensor",
-        "characteristics": [
-          {
-            "type": "CurrentAmbientLightLevel",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "type": "LightSensor",
+      "characteristics": [
+        {
+          "type": "CurrentAmbientLightLevel",
+          "link": [
+            {
               "type": "Double",
               "topicGet": "/devices/(1)/controls/Illuminance",
               "minStep": 1,
               "checkValue": true
             }
-          }
-        ]
-      },
-      {
-        "type": "C_NoiseSensor",
-        "logics": [
-          {
-            "type": "NoiseDetectedFromCurrentNoiseLevel"
-          }
-        ],
-        "characteristics": [
-          {
-            "type": "C_CurrentNoiseLevel",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "type": "C_NoiseSensor",
+      "logics": [
+        {
+          "type": "NoiseDetectedFromCurrentNoiseLevel"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "C_CurrentNoiseLevel",
+          "link": [
+            {
               "type": "Double",
               "topicGet": "/devices/(1)/controls/Sound Level",
               "minStep": 5,
               "checkValue": true
             }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "MotionSensor",
+      "logics": [
+        {
+          "type": "MotionDetectedFromCurrentMotionLevel"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "MotionDetected",
+          "data": {
+            "SwitchOffDelay": 180
           }
-        ]
-      },
-      {
-        "type": "MotionSensor",
-        "logics": [
-          {
-            "type": "MotionDetectedFromCurrentMotionLevel"
-          }
-        ],
-        "characteristics": [
-          {
-            "type": "MotionDetected",
-            "data": {
-              "SwitchOffDelay": 180
-            }
-          },
-          {
-            "type": "C_CurrentMotionLevel",
-            "link": {
+        },
+        {
+          "type": "C_CurrentMotionLevel",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/Current Motion",
               "minStep": 10,
               "checkValue": true
             }
-          }
-        ]
-      },
-      {
-        "name": "Зуммер",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Зуммер",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/Buzzer",
               "topicSet": "/devices/(1)/controls/Buzzer/on"
             }
-          }
-        ]
-      },
-      {
-        "name": "Красный светодиод",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Красный светодиод",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/Red LED",
               "topicSet": "/devices/(1)/controls/Red LED/on"
             }
-          }
-        ]
-      },
-      {
-        "name": "Зелёный светодиод",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Зелёный светодиод",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/Green LED",
               "topicSet": "/devices/(1)/controls/Green LED/on"
             }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Управление техникой по ИК",
-    "manufacturer": "Wiren Board",
-    "model": "WB-MSW3",
-    "services": [
-      {
-        "name": "Отправить ИК",
-        "visible": false,
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
-              "type": "Integer",
-              "topicSearch": "/devices/(wb-msw-v3_[0-9]{1,3})/controls/Play from ROM([0-9]{1,2})/meta/type",
-              "topicGet": "/devices/(1)/controls/Play from ROM(2)",
-              "topicSet": "/devices/(1)/controls/Play from ROM(2)/on"
-            },
-            "data": {
-              "SwitchOffTime": 0.1
-            }
-          }
-        ]
-      }
-    ]
-  }
-]
+          ]
+        }
+      ]
+    }
+  ]
+}

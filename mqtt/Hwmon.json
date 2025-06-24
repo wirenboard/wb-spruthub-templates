@@ -1,6 +1,7 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "System",
+  "modelId": "/devices/(hwmon)/controls/Board Temperature/meta/type",
   "services": [
     {
       "name": "Плата",
@@ -8,13 +9,14 @@
       "characteristics": [
         {
           "type": "CurrentTemperature",
-          "link": {
-            "type": "Double",
-            "topicSearch": "/devices/(hwmon)/controls/Board Temperature/meta/type",
-            "topicGet": "/devices/(1)/controls/Board Temperature",
-            "minStep": 0.5,
-            "checkValue": true
-          }
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Board Temperature",
+              "minStep": 0.5,
+              "checkValue": true
+            }
+          ]
         }
       ]
     },
@@ -24,12 +26,14 @@
       "characteristics": [
         {
           "type": "CurrentTemperature",
-          "link": {
-            "type": "Double",
-            "topicGet": "/devices/(1)/controls/CPU Temperature",
-            "minStep": 0.5,
-            "checkValue": true
-          }
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/CPU Temperature",
+              "minStep": 0.5,
+              "checkValue": true
+            }
+          ]
         }
       ]
     }

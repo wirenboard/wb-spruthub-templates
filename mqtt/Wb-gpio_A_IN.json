@@ -1,0 +1,22 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "I2C",
+  "modelId": "/devices/(wb-gpio)/controls/(A[0-9]_IN)/meta/type",
+  "visible": false,
+  "services": [
+    {
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

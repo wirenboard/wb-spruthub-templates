@@ -1,18 +1,20 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WB-MR6C",
+  "modelId": "/devices/(wb-mrwl3_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
   "services": [
     {
       "type": "Switch",
       "characteristics": [
         {
           "type": "On",
-          "link": {
-            "type": "Integer",
-            "topicSearch": "/devices/(wb-mrwl3_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
-            "topicGet": "/devices/(1)/controls/K(2)",
-            "topicSet": "/devices/(1)/controls/K(2)/on"
-          }
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/K(2)",
+              "topicSet": "/devices/(1)/controls/K(2)/on"
+            }
+          ]
         }
       ]
     }

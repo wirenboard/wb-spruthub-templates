@@ -1,146 +1,122 @@
-[
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-MRM2-mini",
-    "name": "Штора",
-    "catalogId": 378,
-    "services": [
-      {
-        "name": "Открыть",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MRM2-mini",
+  "modelId": "/devices/(wb-mrm2-mini_[0-9]{1,3})/controls/K([0-9]{1,2})/meta",
+  "name": "Канал реле и дискретный вход",
+  "catalogId": 378,
+  "services": [
+    {
+      "name": "@relay",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mrm2-mini_[0-9]{1,3})/controls/(Curtain [0-9]{1,2}) Open/meta",
-              "topicGet": "/devices/(1)/controls/(2) Open",
-              "topicSet": "/devices/(1)/controls/(2) Open/on"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Закрыть",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
-              "type": "Integer",
-              "topicGet": "/devices/(1)/controls/(2) Close",
-              "topicSet": "/devices/(1)/controls/(2) Close/on"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-MRM2-mini",
-    "name": "Канал реле и дискретный вход",
-    "catalogId": 378,
-    "services": [
-      {
-        "name": "Реле",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
-              "type": "Integer",
-              "topicSearch": "/devices/(wb-mrm2-mini_[0-9]{1,3})/controls/K([0-9]{1,2})/meta",
               "topicGet": "/devices/(1)/controls/K(2)",
               "topicSet": "/devices/(1)/controls/K(2)/on"
             }
-          }
-        ]
-      },
-      {
-        "name": "Состояние входа",
-        "visible": false,
-        "type": "ContactSensor",
-        "characteristics": [
-          {
-            "type": "ContactSensorState",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Состояние входа",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/Input (2)"
             }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
               "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) counter"
             }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик коротких нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик коротких нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
               "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
             }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик длинных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик длинных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
               "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
             }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик двойных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик двойных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
               "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
             }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик коротких, а затем длинных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик коротких, а затем длинных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
               "type": "Double",
               "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
             }
-          }
-        ]
-      }
-    ]
-  }
-]
+          ]
+        }
+      ]
+    }
+  ]
+}
+

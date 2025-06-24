@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MAI6",
+  "modelId": "/devices/(wb-mai6_[0-9]{1,3})/controls/(IN [0-9]{1,2}.?[PN]* Value)/meta",
+  "catalogId": 4000,
+  "services": [
+    {
+      "name": "Дистанция",
+      "type": "C_DistanceSensor",
+      "characteristics": [
+        {
+          "type": "C_Distance",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2)",
+              "scale": 0.01
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+

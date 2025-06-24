@@ -1,62 +1,25 @@
-[
-  {
-    "manufacturer": "Wiren Board",
-    "model": "MR6CU",
-    "name": "Штора",
-    "catalogId": 3207,
-    "services": [
-      {
-        "name": "Открыть",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
+{
+  "name": "Канал реле",
+  "manufacturer": "Wiren Board",
+  "model": "MR6CU",
+  "modelId": "/devices/(wb-mr6cu_[0-9]{1,3})/controls/(K[0-9])/meta",
+  "catalogId": 3207,
+  "services": [
+    {
+      "name": "@relay",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mr6cu_[0-9]{1,3})/controls/(Curtain [0-9]{1,2}) Open/meta",
-              "topicGet": "/devices/(1)/controls/(2) Open",
-              "topicSet": "/devices/(1)/controls/(2) Open/on"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Закрыть",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
-              "type": "Integer",
-              "topicGet": "/devices/(1)/controls/(2) Close",
-              "topicSet": "/devices/(1)/controls/(2) Close/on"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "name": "Канал реле",
-    "manufacturer": "Wiren Board",
-    "model": "MR6CU",
-    "catalogId": 3207,
-    "services": [
-      {
-        "name": "Реле",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
-              "type": "Integer",
-              "topicSearch": "/devices/(wb-mr6cu_[0-9]{1,3})/controls/(K[0-9])/meta",
               "topicGet": "/devices/(1)/controls/(2)",
               "topicSet": "/devices/(1)/controls/(2)/on"
             }
-          }
-        ]
-      }
-    ]
-  }
-]
+          ]
+        }
+      ]
+    }
+  ]
+}

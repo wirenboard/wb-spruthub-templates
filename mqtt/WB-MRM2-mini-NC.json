@@ -1,20 +1,23 @@
 {
   "manufacturer": "Wiren Board",
-  "model": "WB-MRM2-mini-NC",
+  "model": "WB-MRM2-mini-nc",
+  "modelId": "/devices/(wb-mrm2-mini-nc_[0-9]{1,3})/controls/K([0-9]{1,2})/meta",
   "name": "Канал реле и дискретный вход",
+  "catalogId": 373,
   "services": [
     {
-      "name": "Реле",
+      "name": "@relay",
       "type": "Switch",
       "characteristics": [
         {
           "type": "On",
-          "link": {
-            "type": "Integer",
-            "topicSearch": "/devices/(wb-mrm2-mini-nc_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
-            "topicGet": "/devices/(1)/controls/K(2)",
-            "topicSet": "/devices/(1)/controls/K(2)/on"
-          }
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/K(2)",
+              "topicSet": "/devices/(1)/controls/K(2)/on"
+            }
+          ]
         }
       ]
     },
@@ -25,10 +28,12 @@
       "characteristics": [
         {
           "type": "ContactSensorState",
-          "link": {
-            "type": "Integer",
-            "topicGet": "/devices/(1)/controls/Input (2)"
-          }
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Input (2)"
+            }
+          ]
         }
       ]
     },
@@ -39,10 +44,12 @@
       "characteristics": [
         {
           "type": "C_PulseCount",
-          "link": {
-            "type": "float",
-            "topicGet": "/devices/(1)/controls/Input (2) counter"
-          }
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Input (2) counter"
+            }
+          ]
         }
       ]
     },
@@ -53,10 +60,12 @@
       "characteristics": [
         {
           "type": "C_PulseCount",
-          "link": {
-            "type": "float",
-            "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
-          }
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
+            }
+          ]
         }
       ]
     },
@@ -67,10 +76,12 @@
       "characteristics": [
         {
           "type": "C_PulseCount",
-          "link": {
-            "type": "float",
-            "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
-          }
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
+            }
+          ]
         }
       ]
     },
@@ -81,10 +92,12 @@
       "characteristics": [
         {
           "type": "C_PulseCount",
-          "link": {
-            "type": "float",
-            "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
-          }
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
+            }
+          ]
         }
       ]
     },
@@ -95,10 +108,12 @@
       "characteristics": [
         {
           "type": "C_PulseCount",
-          "link": {
-            "type": "float",
-            "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
-          }
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
+            }
+          ]
         }
       ]
     }
