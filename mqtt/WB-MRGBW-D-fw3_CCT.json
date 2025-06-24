@@ -1,0 +1,47 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MRGBW-D-fw3",
+  "modelId": "/devices/(wb-mrgbw-d-fw3_[0-9]{1,3})/controls/(CCT[0-9]).([1-4_a-z ()]{1,})/meta/type",
+  "name": "Желто-белая лента",
+  "services": [
+    {
+      "type": "Lightbulb",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) (3)",
+              "topicSet": "/devices/(1)/controls/(2) (3)/on"
+            }
+          ]
+        },
+        {
+          "type": "Brightness",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Brightness",
+              "topicSet": "/devices/(1)/controls/(2) Brightness/on"
+            }
+          ]
+        },
+        {
+          "type": "ColorTemperature",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Temperature",
+              "topicSet": "/devices/(1)/controls/(2) Temperature/on",
+              "maxValue": 100,
+              "minValue": 0
+            }
+          ],
+          "minValue": 50,
+          "maxValue": 400
+        }
+      ]
+    }
+  ]
+}

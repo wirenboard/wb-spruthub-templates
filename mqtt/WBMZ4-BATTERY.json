@@ -1,0 +1,66 @@
+{
+  "manufacturer": "WirenBoard",
+  "model": "WBMZ4-BATTERY",
+  "modelId": "/devices/(battery)/controls/Percentage/meta",
+  "name": "Резервное питание",
+  "catalogId": 3950,
+  "services": [
+    {
+      "name": "Резервное питание",
+      "type": "BatteryService",
+      "visible": true,
+      "characteristics": [
+        {
+          "type": "BatteryLevel",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Percentage"
+            }
+          ]
+        },
+        {
+          "type": "ChargingState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Charging"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ток",
+      "type": "C_AmpereMeter",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_Ampere",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Current"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Напряжение",
+      "type": "C_VoltMeter",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_Volt",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Voltage"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

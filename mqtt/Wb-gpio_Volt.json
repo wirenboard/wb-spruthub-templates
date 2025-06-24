@@ -1,0 +1,22 @@
+{
+  "manufacturer": "WirenBoard",
+  "model": "I2C",
+  "modelId": "/devices/wb-adc/controls/(A[1-4])/meta/type",
+  "visible": false,
+  "services": [
+    {
+      "type": "C_VoltMeter",
+      "characteristics": [
+        {
+          "type": "C_Volt",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/wb-adc/controls/(1)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MRM2-mini-nc",
+  "modelId": "/devices/(wb-mrm2-mini-nc_[0-9]{1,3})/controls/(Curtain [0-9]{1,2}) Open/meta",
+  "name": "Штора",
+  "catalogId": 373,
+  "services": [
+    {
+      "name": "Открыть",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Open",
+              "topicSet": "/devices/(1)/controls/(2) Open/on"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Закрыть",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2) Close",
+              "topicSet": "/devices/(1)/controls/(2) Close/on"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
