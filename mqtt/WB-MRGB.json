@@ -1,6 +1,6 @@
 {
   "name": "Цветная лента",
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WB-MRGB",
   "modelId": "/devices/(wb-mrgb_[0-9]{1,3})/controls/RGB/meta/type",
   "services": [
