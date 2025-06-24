@@ -1,6 +1,6 @@
 {
   "name": "Напряжение",
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WBIO-DI-IN",
   "modelId": "/devices/(wb-gpio)/controls/(EXT[0-9]_IN[0-9]{1,2})/meta/type",
   "services": [
