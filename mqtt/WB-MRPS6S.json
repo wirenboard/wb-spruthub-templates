@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WB-MRPS6/S",
   "modelId": "/devices/(wb-mrps6_[0-9]{1,3})/controls/K([0-9]{1,2})/meta/type",
   "services": [
