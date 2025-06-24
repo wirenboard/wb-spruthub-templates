@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WB-MDM2",
   "modelId": "/devices/(wb-mdm2_[0-9]{1,3})/controls/Channel ([0-9])/meta/type",
   "services": [
