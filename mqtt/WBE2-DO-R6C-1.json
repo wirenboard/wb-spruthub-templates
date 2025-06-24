@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WBE2-DO-R6C-1",
   "modelId": "/devices/(wb-gpio)/controls/(MOD[1-9]_OUT[1-9])/meta/type",
   "services": [
