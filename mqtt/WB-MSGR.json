@@ -1,6 +1,6 @@
 {
   "name": "Газ",
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WB-MSGR",
   "modelId": "/devices/(wb-msgr_[0-9]{1,3})/controls/Relay/meta/type",
   "services": [
