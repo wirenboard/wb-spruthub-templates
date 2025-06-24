@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "I2C",
   "modelId": "/devices/wb-adc/controls/(A[1-4])/meta/type",
   "visible": false,
