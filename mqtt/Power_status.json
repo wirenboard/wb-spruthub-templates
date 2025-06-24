@@ -1,6 +1,6 @@
 {
   "name": "Аккумулятор",
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "System",
   "modelId": "/devices/(power_status)/controls/working on battery/meta/type",
   "services": [
