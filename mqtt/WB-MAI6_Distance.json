@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WB-MAI6",
   "modelId": "/devices/(wb-mai6_[0-9]{1,3})/controls/(IN [0-9]{1,2}.?[PN]* Value)/meta",
   "catalogId": 4000,
