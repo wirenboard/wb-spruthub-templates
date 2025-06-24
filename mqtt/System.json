@@ -1,6 +1,6 @@
 {
-  "name": "Перезагрузка WirenBoard",
-  "manufacturer": "WirenBoard",
+  "name": "Перезагрузка Wiren Board",
+  "manufacturer": "Wiren Board",
   "model": "System",
   "modelId": "/devices/(system)/controls/Reboot/meta/type",
   "visible": false,
