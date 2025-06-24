@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "System",
   "modelId": "/devices/(hwmon)/controls/Board Temperature/meta/type",
   "services": [
