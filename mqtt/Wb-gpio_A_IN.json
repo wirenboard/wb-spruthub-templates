@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "I2C",
   "modelId": "/devices/(wb-gpio)/controls/(A[0-9]_IN)/meta/type",
   "visible": false,
