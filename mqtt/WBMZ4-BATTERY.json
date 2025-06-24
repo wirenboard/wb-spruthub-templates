@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WBMZ4-BATTERY",
   "modelId": "/devices/(battery)/controls/Percentage/meta",
   "name": "Резервное питание",
