@@ -1,5 +1,5 @@
 {
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "WBMZ4-SUPERCAP",
   "modelId": "/devices/(battery)/controls/Power/meta",
   "name": "Резервное питание",
