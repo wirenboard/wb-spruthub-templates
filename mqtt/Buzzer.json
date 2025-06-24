@@ -1,6 +1,6 @@
 {
   "name": "Сирена",
-  "manufacturer": "WirenBoard",
+  "manufacturer": "Wiren Board",
   "model": "System",
   "modelId": "/devices/(buzzer)/controls/enabled/meta/type",
   "services": [
