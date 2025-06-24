@@ -1,19 +1,21 @@
 {
   "manufacturer": "WirenBoard",
   "model": "WBIO-AO-10V-8",
+  "modelId": "/devices/(wb-dac)/controls/(EXT[0-9]_O[0-9]{1,2})/meta/type",
   "services": [
     {
       "type": "Lightbulb",
       "characteristics": [
         {
           "type": "Brightness",
-          "link": {
-            "type": "Integer",
-            "topicSearch": "/devices/(wb-dac)/controls/(EXT[0-9]_O[0-9]{1,2})/meta/type",
-            "topicGet": "/devices/(1)/controls/(2)",
-            "topicSet": "/devices/(1)/controls/(2)/on",
-            "maxValue": 10000
-          }
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2)",
+              "topicSet": "/devices/(1)/controls/(2)/on",
+              "maxValue": 10000
+            }
+          ]
         }
       ]
     }

@@ -1,6 +1,7 @@
 {
   "manufacturer": "WirenBoard",
   "model": "WBIO-DO-R10R-4",
+  "modelId": "/devices/(wb-gpio)/controls/(EXT[0-9]_DIR[0-9]{1,2})/meta/type",
   "services": [
     {
       "type": "WindowCovering",
@@ -16,15 +17,16 @@
       "characteristics": [
         {
           "type": "C_TargetPositionState",
-          "link": {
-            "type": "Integer",
-            "format": "WBCovering",
-            "events": false,
-            "write": true,
-            "topicSearch": "/devices/(wb-gpio)/controls/(EXT[0-9]_DIR[0-9]{1,2})/meta/type",
-            "topicGet": "/devices/(1)/controls/(2)",
-            "topicSet": "/devices/(1)/controls/(2)/on"
-          }
+          "link": [
+            {
+              "type": "Integer",
+              "format": "WBCovering",
+              "events": false,
+              "write": true,
+              "topicGet": "/devices/(1)/controls/(2)",
+              "topicSet": "/devices/(1)/controls/(2)/on"
+            }
+          ]
         }
       ]
     }

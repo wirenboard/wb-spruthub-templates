@@ -1,17 +1,19 @@
 {
   "manufacturer": "WirenBoard",
   "model": "WB-MIO-GPIO-DR",
+  "modelId": "/devices/(wb-mio-gpio_[0-9]{1,3}:[0-9]{1,3})/controls/DR([0-9]{1,2})/meta/type",
   "services": [
     {
       "type": "ContactSensor",
       "characteristics": [
         {
           "type": "ContactSensorState",
-          "link": {
-            "type": "Integer",
-            "topicSearch": "/devices/(wb-mio-gpio_[0-9]{1,3}:[0-9]{1,3})/controls/DR([0-9]{1,2})/meta/type",
-            "topicGet": "/devices/(1)/controls/DR(2)"
-          }
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/DR(2)"
+            }
+          ]
         }
       ]
     }

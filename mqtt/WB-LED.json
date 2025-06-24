@@ -1,210 +1,34 @@
-[
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-LED",
-    "name": "Цветная лента",
-    "catalogId": 3979,
-    "services": [
-      {
-        "type": "Lightbulb",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-LED",
+  "modelId": "/devices/(wb-led_[0-9]{1,3})/controls/(Channel.+[1-4_a-zA-Z ()]{1,}) Brightness/meta/type",
+  "name": "Белая лента",
+  "services": [
+    {
+      "name": "Белый канал",
+      "type": "Lightbulb",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/(RGB Strip)/meta/type",
               "topicGet": "/devices/(1)/controls/(2)",
               "topicSet": "/devices/(1)/controls/(2)/on"
             }
-          },
-          {
-            "type": "Brightness",
-            "link": {
+          ]
+        },
+        {
+          "type": "Brightness",
+          "link": [
+            {
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/(2) Brightness",
               "topicSet": "/devices/(1)/controls/(2) Brightness/on"
             }
-          },
-          {
-            "type": "Hue",
-            "link": {
-              "type": "RGB",
-              "format": "RGB",
-              "topicGet": "/devices/(1)/controls/RGB Palette",
-              "topicSet": "/devices/(1)/controls/RGB Palette/on"
-            }
-          },
-          {
-            "type": "Saturation",
-            "link": {
-              "type": "Integer",
-              "topicGet": "/devices/(1)/controls/(2) Saturation",
-              "topicSet": "/devices/(1)/controls/(2) Saturation/on"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-LED",
-    "name": "Белая лента",
-    "services": [
-      {
-        "name": "Белый канал",
-        "type": "Lightbulb",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
-              "type": "Integer",
-              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/(Channel.+[1-4_a-zA-Z ()]{1,}) Brightness/meta/type",
-              "topicGet": "/devices/(1)/controls/(2)",
-              "topicSet": "/devices/(1)/controls/(2)/on"
-            }
-          },
-          {
-            "type": "Brightness",
-            "link": {
-              "type": "Integer",
-              "topicGet": "/devices/(1)/controls/(2) Brightness",
-              "topicSet": "/devices/(1)/controls/(2) Brightness/on"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-LED",
-    "name": "Желто-белая лента",
-    "services": [
-      {
-        "type": "Lightbulb",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
-              "type": "Integer",
-              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/CCT([1-2]{1,2})/meta/type",
-              "topicGet": "/devices/(1)/controls/CCT(2)",
-              "topicSet": "/devices/(1)/controls/CCT(2)/on"
-            }
-          },
-          {
-            "type": "Brightness",
-            "link": {
-              "type": "Integer",
-              "topicGet": "/devices/(1)/controls/CCT(2) Brightness",
-              "topicSet": "/devices/(1)/controls/CCT(2) Brightness/on"
-            }
-          },
-          {
-            "type": "ColorTemperature",
-            "link": {
-              "type": "Integer",
-              "topicGet": "/devices/(1)/controls/CCT(2) Temperature",
-              "topicSet": "/devices/(1)/controls/CCT(2) Temperature/on",
-              "maxValue": 100,
-              "minValue": 0
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-LED",
-    "name": "Дискретный вход",
-    "services": [
-      {
-        "name": "Состояние входа",
-        "visible": false,
-        "type": "ContactSensor",
-        "characteristics": [
-          {
-            "type": "ContactSensorState",
-            "link": {
-              "type": "Integer",
-              "topicSearch": "/devices/(wb-led_[0-9]{1,3})/controls/(Input [0-9]{1,2})/meta/type",
-              "topicGet": "/devices/(1)/controls/(2)"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик коротких нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Single Press Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик длинных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Long Press Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик двойных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Double Press Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик коротких, а затем длинных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Shortlong Press Counter"
-            }
-          }
-        ]
-      }
-    ]
-  }
-]
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,25 +1,25 @@
-[
-  {
-    "name": "Дискретный выход",
-    "manufacturer": "Wiren Board",
-    "model": "WB-MOD Relay",
-    "catalogId": 4392,
-    "services": [
-      {
-        "name": "Реле",
-        "type": "Switch",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
+{
+  "name": "Дискретный выход",
+  "manufacturer": "Wiren Board",
+  "model": "WB-MOD Relay",
+  "modelId": "/devices/(wb-gpio)/controls/(MOD[0-4]{1,2})_(K[0-3]{1,2})/meta/type",
+  "catalogId": 4392,
+  "services": [
+    {
+      "name": "@relay",
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-gpio)/controls/(MOD[0-4]{1,2})_(K[0-3]{1,2})/meta/type",
               "topicGet": "/devices/(1)/controls/(2)_(3)",
               "topicSet": "/devices/(1)/controls/(2)_(3)/on"
             }
-          }
-        ]
-      }
-    ]
-  }
-]
+          ]
+        }
+      ]
+    }
+  ]
+}

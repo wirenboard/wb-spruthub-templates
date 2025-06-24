@@ -2,6 +2,7 @@
   "name": "Сирена",
   "manufacturer": "WirenBoard",
   "model": "System",
+  "modelId": "/devices/(buzzer)/controls/enabled/meta/type",
   "services": [
     {
       "name": "Сирена",
@@ -9,12 +10,13 @@
       "characteristics": [
         {
           "type": "On",
-          "link": {
-            "type": "Integer",
-            "topicSearch": "/devices/(buzzer)/controls/enabled/meta/type",
-            "topicGet": "/devices/(1)/controls/enabled",
-            "topicSet": "/devices/(1)/controls/enabled/on"
-          }
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/enabled",
+              "topicSet": "/devices/(1)/controls/enabled/on"
+            }
+          ]
         }
       ]
     }

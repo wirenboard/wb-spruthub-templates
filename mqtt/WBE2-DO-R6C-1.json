@@ -1,18 +1,20 @@
 {
   "manufacturer": "WirenBoard",
   "model": "WBE2-DO-R6C-1",
+  "modelId": "/devices/(wb-gpio)/controls/(MOD[1-9]_OUT[1-9])/meta/type",
   "services": [
     {
       "type": "Switch",
       "characteristics": [
         {
           "type": "On",
-          "link": {
-            "type": "Integer",
-            "topicSearch": "/devices/(wb-gpio)/controls/(MOD[1-9]_OUT[1-9])/meta/type",
-            "topicGet": "/devices/(1)/controls/(2)",
-            "topicSet": "/devices/(1)/controls/(2)/on"
-          }
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2)",
+              "topicSet": "/devices/(1)/controls/(2)/on"
+            }
+          ]
         }
       ]
     }

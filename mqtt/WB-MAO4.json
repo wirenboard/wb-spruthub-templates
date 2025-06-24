@@ -1,148 +1,26 @@
-[
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-MAO4",
-    "name": "Выход 0-10 В и дискретный вход",
-    "catalogId": 70,
-    "services": [
-      {
-        "type": "Lightbulb",
-        "name": "Выход",
-        "characteristics": [
-          {
-            "type": "Brightness",
-            "link": {
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MAO4",
+  "modelId": "/devices/(wb-mao4_[0-9]{1,3})/controls/Channel ([0-9])/meta/type",
+  "name": "Выход 0-10 В и дискретный вход",
+  "catalogId": 70,
+  "services": [
+    {
+      "type": "Lightbulb",
+      "name": "Выход",
+      "characteristics": [
+        {
+          "type": "Brightness",
+          "link": [
+            {
               "type": "Integer",
-              "topicSearch": "/devices/(wb-mao4_[0-9]{1,3})/controls/Channel ([0-9])/meta/type",
               "topicGet": "/devices/(1)/controls/Channel (2)",
               "topicSet": "/devices/(1)/controls/Channel (2)/on",
               "maxValue": 10000
             }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-MAO4",
-    "name": "Диммер 0-10 В",
-    "services": [
-      {
-        "type": "Lightbulb",
-        "name": "Выход",
-        "characteristics": [
-          {
-            "type": "On",
-            "link": {
-              "type": "Integer",
-              "topicSearch": "/devices/(wb-mao4_[0-9]{1,3})/controls/(Channel [0-9]) Switch/meta/type",
-              "topicGet": "/devices/(1)/controls/(2) Switch",
-              "topicSet": "/devices/(1)/controls/(2) Switch/on"
-            }
-          },
-          {
-            "type": "Brightness",
-            "link": {
-              "type": "Integer",
-              "topicGet": "/devices/(1)/controls/(2) Dimming Level",
-              "topicSet": "/devices/(1)/controls/(2) Dimming Level/on"
-            }
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "manufacturer": "Wiren Board",
-    "model": "WB-MAO4",
-    "name": "Дискретный вход",
-    "services": [
-      {
-        "name": "Состояние входа",
-        "visible": false,
-        "type": "ContactSensor",
-        "characteristics": [
-          {
-            "type": "ContactSensorState",
-            "link": {
-              "type": "Integer",
-              "topicSearch": "/devices/(wb-mao4_[0-9]{1,3})/controls/(Input [0-9])/meta/type",
-              "topicGet": "/devices/(1)/controls/(2)"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счётчик",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик коротких нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Short Press Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик длинных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Long Press Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик двойных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Double Press Counter"
-            }
-          }
-        ]
-      },
-      {
-        "name": "Счетчик коротких, а затем длинных нажатий",
-        "visible": false,
-        "type": "C_PulseMeter",
-        "characteristics": [
-          {
-            "type": "C_PulseCount",
-            "link": {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/(2) Short Long Press Counter"
-            }
-          }
-        ]
-      }
-    ]
-  }
-]
+          ]
+        }
+      ]
+    }
+  ]
+}

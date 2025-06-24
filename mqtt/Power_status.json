@@ -2,6 +2,7 @@
   "name": "Аккумулятор",
   "manufacturer": "WirenBoard",
   "model": "System",
+  "modelId": "/devices/(power_status)/controls/working on battery/meta/type",
   "services": [
     {
       "name": "Аккумулятор",
@@ -9,11 +10,28 @@
       "characteristics": [
         {
           "type": "ContactSensorState",
-          "link": {
-            "type": "Integer",
-            "topicSearch": "/devices/(power_status)/controls/working on battery/meta/type",
-            "topicGet": "/devices/(1)/controls/working on battery"
-          }
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/working on battery"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "visible": false,
+      "name": "Напряжение блока питания",
+      "type": "C_VoltMeter",
+      "characteristics": [
+        {
+          "type": "C_Volt",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Vin"
+            }
+          ]
         }
       ]
     }

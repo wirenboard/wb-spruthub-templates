@@ -2,6 +2,7 @@
   "name": "Перезагрузка WirenBoard",
   "manufacturer": "WirenBoard",
   "model": "System",
+  "modelId": "/devices/(system)/controls/Reboot/meta/type",
   "visible": false,
   "services": [
     {
@@ -10,12 +11,13 @@
       "characteristics": [
         {
           "type": "On",
-          "link": {
-            "type": "Integer",
-            "topicSearch": "/devices/(system)/controls/Reboot/meta/type",
-            "topicGet": "/devices/(1)/controls/Reboot",
-            "topicSet": "/devices/(1)/controls/Reboot/on"
-          },
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Reboot",
+              "topicSet": "/devices/(1)/controls/Reboot/on"
+            }
+          ],
           "data": {
             "SwitchOffTime": 0.1
           }
