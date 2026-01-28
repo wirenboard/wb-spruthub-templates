@@ -1,0 +1,103 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MWAC v.2",
+  "modelId": "/devices/(wb-mwac-v2_[0-9]{1,3})/controls/(Input [a-zA-Z][0-9]) Single Press Counter/meta",
+  "name": "Дискретный вход",
+  "services": [
+    {
+      "name": "Состояние входа",
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счётчик срабатываний входа",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) Counter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик коротких нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) Single Press Counter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик длинных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) Long Press Counter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик двойных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) Double Press Counter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик коротких, а затем длинных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) Shortlong Press Counter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

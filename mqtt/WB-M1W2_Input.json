@@ -1,0 +1,87 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-M1W2",
+  "modelId": "/devices/(wb-m1w2_[0-9]{1,3})/controls/(Input [0-9])/meta/type",
+  "name": "Дискретный вход",
+  "services": [
+    {
+      "name": "Состояние входа",
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/(2)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "@counter",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) counter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик коротких нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) Single Press Counter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик длинных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) Long Press Counter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счетчик двойных нажатий",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2) Double Press Counter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

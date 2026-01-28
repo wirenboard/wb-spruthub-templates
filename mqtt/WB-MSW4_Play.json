@@ -1,0 +1,29 @@
+{
+  "name": "Управление техникой по ИК",
+  "manufacturer": "Wiren Board",
+  "model": "WB-MSW4",
+  "modelId": "/devices/(wb-msw-v4_[0-9]{1,3})/controls/Play from ROM([0-9]{1,2})/meta/type",
+  "services": [
+    {
+      "name": "Отправить ИК",
+      "visible": false,
+      "type": "Switch",
+      "characteristics": [
+        {
+          "type": "On",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Play from ROM(2)",
+              "topicSet": "/devices/(1)/controls/Play from ROM(2)/on"
+            }
+          ],
+          "data": {
+            "SwitchOffTime": 0.1
+          }
+        }
+      ]
+    }
+  ]
+}
+

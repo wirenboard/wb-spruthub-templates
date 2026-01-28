@@ -1,0 +1,24 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MAI6",
+  "modelId": "/devices/(wb-mai6_[0-9]{1,3})/controls/(IN [0-9]{1,2}.?[PN]* Current)/meta",
+  "catalogId": 4000,
+  "services": [
+    {
+      "name": "Амперметр",
+      "type": "C_AmpereMeter",
+      "characteristics": [
+        {
+          "type": "C_Ampere",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/(2)",
+              "scale": 0.001
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MWAC",
+  "modelId": "/devices/(wb-mwac_[0-9]{1,3})/controls/F([0-9])/meta/type",
+  "services": [
+    {
+      "name": "Датчик протечки",
+      "type": "LeakSensor",
+      "characteristics": [
+        {
+          "type": "LeakDetected",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/F(2)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счётчик срабатываний датчика",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/F(2) Counter"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Дискретный вход",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/S(2)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Счётчик срабатываний входа",
+      "visible": false,
+      "type": "C_PulseMeter",
+      "characteristics": [
+        {
+          "type": "C_PulseCount",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/S(2) Counter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "name": "Параметры электросети",
+  "manufacturer": "Wiren Board",
+  "model": "WB-MAP12E fw2",
+  "modelId": "/devices/(wb-map12e_[0-9]{1,3})/controls/Ch ([0-9]{1,2}) Irms L([0-9]{1,2})/meta/type",
+  "catalogId": 3208,
+  "services": [
+    {
+      "name": "Irms",
+      "visible": false,
+      "type": "C_AmpereMeter",
+      "characteristics": [
+        {
+          "type": "C_Ampere",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Ch (2) Irms L(3)",
+              "minStep": 0.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ipeak",
+      "visible": false,
+      "type": "C_AmpereMeter",
+      "characteristics": [
+        {
+          "type": "C_Ampere",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Ch (2) Ipeak L(3)",
+              "minStep": 0.1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "P",
+      "visible": true,
+      "type": "C_WattMeter",
+      "characteristics": [
+        {
+          "type": "C_Watt",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Ch (2) P L(3)",
+              "minStep": 5.0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Энергия AP",
+      "visible": true,
+      "type": "C_KiloWattHourMeter",
+      "characteristics": [
+        {
+          "type": "C_KiloWattHour",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Ch (2) AP energy L(3)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

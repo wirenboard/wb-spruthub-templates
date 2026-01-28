@@ -1,0 +1,24 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-MS v.2",
+  "modelId": "/devices/(wb-ms_[0-9]{1,3})/controls/External Sensor ([0-9])/meta/type",
+  "services": [
+    {
+      "visible": false,
+      "type": "TemperatureSensor",
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/External Sensor (2)",
+              "minStep": 0.5,
+              "checkValue": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
