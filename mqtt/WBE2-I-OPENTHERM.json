@@ -1,0 +1,247 @@
+{
+  "name": "WBE2-I-EBUS",
+  "manufacturer": "Wiren Board",
+  "model": "WBE2-I-EBUS",
+  "modelIds": [
+    "/devices/(wbe2-i-ebus_[0-9]{1,3})/controls/.*/meta"
+  ],
+  "catalogId": 3538,
+  "services": [
+    {
+      "name": "Отопление",
+      "type": "Thermostat",
+      "logics": [
+        {
+          "type": "CurrentHeatingCoolingFromTarget"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Heating Temperature"
+            }
+          ]
+        },
+        {
+          "type": "TargetTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Heating Setpoint",
+              "topicSet": "/devices/(1)/controls/Heating Setpoint/on"
+            }
+          ],
+          "minValue": 0,
+          "maxValue": 80,
+          "minStep": 1
+        },
+        {
+          "type": "CurrentHeatingCoolingState",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "map": {
+                "OFF": "0",
+                "HEAT": "1~100"
+              }
+            }
+          ],
+          "validValues": "OFF,HEAT"
+        },
+        {
+          "type": "TargetHeatingCoolingState",
+          "validValues": "HEAT",
+          "option": true
+        },
+        {
+          "type": "TemperatureDisplayUnits",
+          "validValues": "CELSIUS",
+          "option": true
+        }
+      ]
+    },
+    {
+      "name": "Комнатная температура",
+      "visible": false,
+      "type": "Thermostat",
+      "logics": [
+        {
+          "type": "CurrentHeatingCoolingFromTarget"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Room Temperature"
+            }
+          ]
+        },
+        {
+          "type": "TargetTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Room Temperature Setpoint",
+              "topicSet": "/devices/(1)/controls/Room Temperature Setpoint/on"
+            }
+          ],
+          "minValue": 0,
+          "maxValue": 35,
+          "minStep": 1
+        },
+        {
+          "type": "CurrentHeatingCoolingState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "map": {
+                "OFF": "0",
+                "HEAT": "1~100"
+              }
+            }
+          ],
+          "validValues": "OFF,HEAT"
+        },
+        {
+          "type": "TargetHeatingCoolingState",
+          "validValues": "HEAT",
+          "option": true
+        },
+        {
+          "type": "TemperatureDisplayUnits",
+          "validValues": "CELSIUS",
+          "option": true
+        }
+      ]
+    },
+    {
+      "name": "Горячее водоснабжение",
+      "type": "Thermostat",
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Hot Water Temperature"
+            }
+          ]
+        },
+        {
+          "type": "TargetTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Hot Water Setpoint",
+              "topicSet": "/devices/(1)/controls/Hot Water Setpoint/on"
+            }
+          ],
+          "minValue": 0,
+          "maxValue": 80,
+          "minStep": 1
+        },
+        {
+          "type": "CurrentHeatingCoolingState",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "map": {
+                "OFF": "0",
+                "HEAT": "1~100"
+              }
+            }
+          ],
+          "validValues": "OFF,HEAT"
+        },
+        {
+          "type": "TargetHeatingCoolingState",
+          "validValues": "HEAT",
+          "option": true
+        },
+        {
+          "type": "TemperatureDisplayUnits",
+          "validValues": "CELSIUS",
+          "option": true
+        }
+      ]
+    },
+    {
+      "name": "Давление в котле",
+      "type": "C_AtmosphericPressureSensor",
+      "characteristics": [
+        {
+          "type": "C_CurrentAtmosphericPressure",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Water Pressure"
+            }
+          ],
+          "maxValue": 6,
+          "minStep": 0.01,
+          "unit": "бар"
+        }
+      ]
+    },
+    {
+      "name": "Модуляция горелки",
+      "visible": false,
+      "type": "C_Option",
+      "characteristics": [
+        {
+          "type": "C_Intensity",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "name": "Ошибка связи с котлом",
+      "type": "Boolean",
+      "link": [
+        {
+          "type": "Boolean",
+          "topicGet": "/devices/(1)/controls/Invalid Connection"
+        }
+      ],
+      "inputType": "STATUS"
+    },
+    {
+      "name": "Версия FW модуля",
+      "type": "String",
+      "link": [
+        {
+          "type": "Double",
+          "topicGet": "/devices/(1)/controls/FW Version"
+        }
+      ],
+      "inputType": "STATUS"
+    },
+    {
+      "name": "Код ошибки",
+      "type": "String",
+      "link": [
+        {
+          "type": "Double",
+          "topicGet": "/devices/(1)/controls/Error Code"
+        }
+      ],
+      "inputType": "STATUS"
+    }
+  ]
+}
