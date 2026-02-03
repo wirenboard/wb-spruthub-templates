@@ -1,7 +1,7 @@
 {
-    "name": "WBE2-I-EBUS",
-    "manufacturer": "Wiren Board",
-    "model": "WBE2-I-EBUS",
+  "name": "WBE2-I-EBUS",
+  "manufacturer": "Wiren Board",
+  "model": "WBE2-I-EBUS",
   "modelIds": [
     "/devices/(wbe2-i-ebus_[0-9]{1,3})/controls/.*/meta"
   ],
@@ -35,15 +35,15 @@
             }
           ],
           "minValue": 0,
-          "maxValue": 80,
-          "minStep": 1.0
+          "maxValue": 85,
+          "minStep": 1
         },
         {
           "type": "CurrentHeatingCoolingState",
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level (%)",
               "map": {
                 "OFF": "0",
                 "HEAT": "1~100"
@@ -94,14 +94,14 @@
           ],
           "minValue": 0,
           "maxValue": 35,
-          "minStep": 1.0
+          "minStep": 1
         },
         {
           "type": "CurrentHeatingCoolingState",
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level (%)",
               "map": {
                 "OFF": "0",
                 "HEAT": "1~100"
@@ -145,15 +145,15 @@
             }
           ],
           "minValue": 0,
-          "maxValue": 80,
-          "minStep": 1.0
+          "maxValue": 85,
+          "minStep": 1
         },
         {
           "type": "CurrentHeatingCoolingState",
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level (%)",
               "map": {
                 "OFF": "0",
                 "HEAT": "1~100"
@@ -202,7 +202,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Burner Modulation Level"
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level (%)"
             }
           ]
         }

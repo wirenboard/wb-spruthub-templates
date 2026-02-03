@@ -43,7 +43,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level (%)",
               "map": {
                 "OFF": "0",
                 "HEAT": "1~100"
@@ -101,7 +101,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level (%)",
               "map": {
                 "OFF": "0",
                 "HEAT": "1~100"
@@ -153,7 +153,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level (%)",
               "map": {
                 "OFF": "0",
                 "HEAT": "1~100"
@@ -202,7 +202,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Burner Modulation Level"
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level (%)"
             }
           ]
         }
