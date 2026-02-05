@@ -175,24 +175,6 @@
       ]
     },
     {
-      "name": "Давление в котле",
-      "type": "C_AtmosphericPressureSensor",
-      "characteristics": [
-        {
-          "type": "C_CurrentAtmosphericPressure",
-          "link": [
-            {
-              "type": "Double",
-              "topicGet": "/devices/(1)/controls/Water Pressure"
-            }
-          ],
-          "maxValue": 6,
-          "minStep": 0.01,
-          "unit": "бар"
-        }
-      ]
-    },
-    {
       "name": "Модуляция горелки",
       "visible": false,
       "type": "C_Option",
@@ -205,6 +187,23 @@
               "topicGet": "/devices/(1)/controls/Burner Modulation Level"
             }
           ]
+        }
+      ]
+    },
+    {
+      "name": "Давление воды",
+      "type": "C_Option",
+      "characteristics": [
+        {
+          "type": "C_Double",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Water Pressure"
+            }
+          ],
+          "minStep": 0.1,
+          "unit": "Бар"
         }
       ]
     }
