@@ -49,6 +49,21 @@
     },
     {
       "name": "Режим: протечка",
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Leakage Mode"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Сброс режима протечка",
       "type": "Switch",
       "characteristics": [
         {
@@ -56,10 +71,13 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Leakage Mode",
-              "topicSet": "/devices/(1)/controls/Leakage Mode/on"
+              "topicGet": "/devices/(1)/controls/Leakage Mode Reset",
+              "topicSet": "/devices/(1)/controls/Leakage Mode Reset/on"
             }
-          ]
+          ],
+          "data": {
+            "SwitchOffTime": 0.1
+          }
         }
       ]
     },
