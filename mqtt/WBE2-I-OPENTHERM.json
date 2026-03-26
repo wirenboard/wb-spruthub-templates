@@ -1,0 +1,246 @@
+{
+  "name": "WBE2-I-OPENTHERM",
+  "manufacturer": "Wiren Board",
+  "model": "WBE2-I-OPENTHERM",
+  "modelIds": [
+    "/devices/(wbe2-i-opentherm_[0-9]{1,3})/controls/.*/meta"
+  ],
+  "catalogId": 3539,
+  "services": [
+    {
+      "name": "Отопление",
+      "type": "Thermostat",
+      "logics": [
+        {
+          "type": "CurrentHeatingCoolingFromTarget"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Heating Temperature"
+            }
+          ]
+        },
+        {
+          "type": "TargetTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Heating Setpoint",
+              "topicSet": "/devices/(1)/controls/Heating Setpoint/on"
+            }
+          ],
+          "minValue": 0,
+          "maxValue": 80,
+          "minStep": 1
+        },
+        {
+          "type": "CurrentHeatingCoolingState",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "map": {
+                "OFF": "0",
+                "HEAT": "1~100"
+              }
+            }
+          ],
+          "validValues": "OFF,HEAT"
+        },
+        {
+          "type": "TargetHeatingCoolingState",
+          "validValues": "HEAT",
+          "option": true
+        },
+        {
+          "type": "TemperatureDisplayUnits",
+          "validValues": "CELSIUS",
+          "option": true
+        }
+      ]
+    },
+    {
+      "name": "Комнатная температура",
+      "visible": false,
+      "type": "Thermostat",
+      "logics": [
+        {
+          "type": "CurrentHeatingCoolingFromTarget"
+        }
+      ],
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Room Temperature"
+            }
+          ]
+        },
+        {
+          "type": "TargetTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Room Temperature Setpoint",
+              "topicSet": "/devices/(1)/controls/Room Temperature Setpoint/on"
+            }
+          ],
+          "minValue": 0,
+          "maxValue": 35,
+          "minStep": 1
+        },
+        {
+          "type": "CurrentHeatingCoolingState",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "map": {
+                "OFF": "0",
+                "HEAT": "1~100"
+              }
+            }
+          ],
+          "validValues": "OFF,HEAT"
+        },
+        {
+          "type": "TargetHeatingCoolingState",
+          "validValues": "HEAT",
+          "option": true
+        },
+        {
+          "type": "TemperatureDisplayUnits",
+          "validValues": "CELSIUS",
+          "option": true
+        }
+      ]
+    },
+    {
+      "name": "Горячее водоснабжение",
+      "type": "Thermostat",
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Hot Water Temperature"
+            }
+          ]
+        },
+        {
+          "type": "TargetTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Hot Water Setpoint",
+              "topicSet": "/devices/(1)/controls/Hot Water Setpoint/on"
+            }
+          ],
+          "minValue": 0,
+          "maxValue": 80,
+          "minStep": 1
+        },
+        {
+          "type": "CurrentHeatingCoolingState",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level",
+              "map": {
+                "OFF": "0",
+                "HEAT": "1~100"
+              }
+            }
+          ],
+          "validValues": "OFF,HEAT"
+        },
+        {
+          "type": "TargetHeatingCoolingState",
+          "validValues": "HEAT",
+          "option": true
+        },
+        {
+          "type": "TemperatureDisplayUnits",
+          "validValues": "CELSIUS",
+          "option": true
+        }
+      ]
+    },
+    {
+      "name": "Модуляция горелки",
+      "visible": false,
+      "type": "C_Option",
+      "characteristics": [
+        {
+          "type": "C_Intensity",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Burner Modulation Level"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Давление воды",
+      "type": "C_Option",
+      "characteristics": [
+        {
+          "type": "C_Double",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Water Pressure"
+            }
+          ],
+          "minStep": 0.1,
+          "unit": "Бар"
+        }
+      ]
+    }
+  ],
+  "options": [
+    {
+      "name": "Ошибка связи с котлом",
+      "type": "Boolean",
+      "link": [
+        {
+          "type": "Boolean",
+          "topicGet": "/devices/(1)/controls/Invalid Connection"
+        }
+      ],
+      "inputType": "STATUS"
+    },
+    {
+      "name": "Версия FW модуля",
+      "type": "String",
+      "link": [
+        {
+          "type": "Double",
+          "topicGet": "/devices/(1)/controls/FW Version"
+        }
+      ],
+      "inputType": "STATUS"
+    },
+    {
+      "name": "Код ошибки",
+      "type": "String",
+      "link": [
+        {
+          "type": "Double",
+          "topicGet": "/devices/(1)/controls/Error Code"
+        }
+      ],
+      "inputType": "STATUS"
+    }
+  ]
+}
