@@ -2,7 +2,9 @@
   "name": "Управление техникой по ИК",
   "manufacturer": "Wiren Board",
   "model": "WB-MIR v.3 (fw4.35+)",
-  "modelId": "/devices/(wb-mir_v3_[0-9]{1,3})/controls/Play from ROM([0-9]{1,2})/meta/type",
+  "modelIds": [
+    "/devices/(wb-mir_v3_[0-9]{1,3})/controls/Play from ROM([0-9]{1,2})/meta/type"
+  ],
   "catalogId": 5747,
   "services": [
     {
