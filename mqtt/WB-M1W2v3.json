@@ -1,0 +1,41 @@
+{
+  "name": "Датчик температуры",
+  "manufacturer": "Wiren Board",
+  "model": "WB-M1W2 v.3 (fw4.35+)",
+  "modelIds": ["/devices/(wb-m1w2_[0-9]{1,3})/controls/bus([12])_temp([1-9][0-9]?)/meta/type"],
+  "catalogId": 72,
+  "services": [
+    {
+      "type": "TemperatureSensor",
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/bus(2)_temp(3)",
+              "minStep": 0.5,
+              "checkValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Датчик подключен",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/bus(2)_sens(3)_ok"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
