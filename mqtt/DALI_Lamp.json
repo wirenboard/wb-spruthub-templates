@@ -1,6 +1,6 @@
 {
   "manufacturer": "Wiren Board",
-  "model": "DALI Lamp",
+  "model": "DALI Gear",
   "modelId": "/devices/([a-zA-Z0-9_-]+)/controls/wanted_level/meta",
   "name": "DALI лампа",
   "services": [
