@@ -1,0 +1,72 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-DALI3",
+  "modelId": "/devices/(wb-dali_[0-9]{1,3})/controls/Bus ([0-9]) State/meta",
+  "name": "Шина DALI",
+  "catalogId": 5986,
+  "services": [
+    {
+      "name": "Состояние шины",
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Bus (2) State"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Наличие питания шины",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Bus (2) Powered"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Внутренний источник питания шины",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Bus (2) Power Supply Status"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Перегрев шины",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Bus (2) Overheat"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "DALI-2 Occupancy Sensor",
+  "modelId": "/devices/([a-zA-Z0-9_-]+_dali2_[0-9]+)/controls/occupied([0-9]+)/meta",
+  "name": "DALI-2 датчик присутствия",
+  "services": [
+    {
+      "type": "OccupancySensor",
+      "characteristics": [
+        {
+          "type": "OccupancyDetected",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/occupied(2)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Движение",
+      "visible": false,
+      "type": "MotionSensor",
+      "characteristics": [
+        {
+          "type": "MotionDetected",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/movement(2)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "DALI Gear",
+  "modelId": "/devices/([a-zA-Z0-9_-]+_bus_[0-9]_broadcast)/controls/go_to_scene/meta",
+  "name": "DALI шина - сцена",
+  "services": [
+    {
+      "name": "Сцена",
+      "type": "SelectStatement",
+      "characteristics": [
+        {
+          "type": "SelectStatement",
+          "link": [
+            {
+              "type": "String",
+              "topicGet": "/devices/(1)/controls/go_to_scene",
+              "topicSet": "/devices/(1)/controls/go_to_scene/on",
+              "enum_values": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "DALI-2 Push Button",
+  "modelId": "/devices/([a-zA-Z0-9_-]+_dali2_[0-9]+)/controls/button([0-9]+)/meta",
+  "name": "DALI-2 кнопка",
+  "services": [
+    {
+      "name": "Кнопка",
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/button(2)"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Длинное нажатие",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/long_press(2)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

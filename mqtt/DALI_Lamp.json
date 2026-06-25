@@ -1,0 +1,40 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "DALI Gear",
+  "modelId": "/devices/([a-zA-Z0-9_-]+)/controls/wanted_level/meta",
+  "name": "DALI лампа",
+  "services": [
+    {
+      "type": "Lightbulb",
+      "characteristics": [
+        {
+          "type": "Brightness",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/actual_level",
+              "topicSet": "/devices/(1)/controls/wanted_level/on",
+              "maxValue": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ошибка балласта",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/error_status"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
