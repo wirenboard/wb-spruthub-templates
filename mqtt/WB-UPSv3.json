@@ -1,0 +1,154 @@
+{
+  "manufacturer": "Wiren Board",
+  "model": "WB-UPS v.3",
+  "modelId": "/devices/(wb_ups_v3_[0-9]{1,3})/controls/Battery Charge Level/meta",
+  "name": "Резервное питание",
+  "catalogId": 5731,
+  "services": [
+    {
+      "name": "Резервное питание",
+      "type": "BatteryService",
+      "visible": true,
+      "characteristics": [
+        {
+          "type": "BatteryLevel",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Battery Charge Level"
+            }
+          ]
+        },
+        {
+          "type": "ChargingState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/Battery Status"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Входное напряжение",
+      "type": "C_VoltMeter",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_Volt",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Input Voltage",
+              "checkValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Выходное напряжение",
+      "type": "C_VoltMeter",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_Volt",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Output Voltage",
+              "checkValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Напряжение батареи",
+      "type": "C_VoltMeter",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_Volt",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Battery Voltage",
+              "checkValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ток батареи",
+      "type": "C_AmpereMeter",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_Ampere",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Battery Current",
+              "checkValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Входной ток для заряда",
+      "type": "C_AmpereMeter",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_Ampere",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Charging Input Current",
+              "checkValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ток нагрузки при питании от батареи",
+      "type": "C_AmpereMeter",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "C_Ampere",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Load Current (Battery Powered)",
+              "checkValue": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Температура батареи",
+      "type": "TemperatureSensor",
+      "visible": false,
+      "characteristics": [
+        {
+          "type": "CurrentTemperature",
+          "link": [
+            {
+              "type": "Double",
+              "topicGet": "/devices/(1)/controls/Battery Temperature",
+              "minStep": 0.1,
+              "checkValue": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
