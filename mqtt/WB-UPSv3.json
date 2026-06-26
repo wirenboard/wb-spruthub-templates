@@ -1,7 +1,7 @@
 {
   "manufacturer": "Wiren Board",
   "model": "WB-UPS v.3",
-  "modelId": "/devices/(wb_ups_v3_[0-9]{1,3})/controls/Battery Charge Level/meta",
+  "modelIds": ["/devices/(wb_ups_v3_[0-9]{1,3})/controls/battery_charge_level/meta/type"],
   "name": "Резервное питание",
   "catalogId": 5731,
   "services": [
@@ -15,7 +15,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Battery Charge Level"
+              "topicGet": "/devices/(1)/controls/battery_charge_level"
             }
           ]
         },
@@ -24,7 +24,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Battery Status"
+              "topicGet": "/devices/(1)/controls/battery_status"
             }
           ]
         }
@@ -40,7 +40,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Input Voltage",
+              "topicGet": "/devices/(1)/controls/input_voltage",
               "checkValue": true
             }
           ]
@@ -57,7 +57,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Output Voltage",
+              "topicGet": "/devices/(1)/controls/output_voltage",
               "checkValue": true
             }
           ]
@@ -74,7 +74,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Battery Voltage",
+              "topicGet": "/devices/(1)/controls/battery_voltage",
               "checkValue": true
             }
           ]
@@ -91,7 +91,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Battery Current",
+              "topicGet": "/devices/(1)/controls/battery_current",
               "checkValue": true
             }
           ]
@@ -108,7 +108,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Charging Input Current",
+              "topicGet": "/devices/(1)/controls/charging_input_current",
               "checkValue": true
             }
           ]
@@ -125,7 +125,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Load Current (Battery Powered)",
+              "topicGet": "/devices/(1)/controls/load_current_battery_powered",
               "checkValue": true
             }
           ]
@@ -142,7 +142,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Battery Temperature",
+              "topicGet": "/devices/(1)/controls/battery_temperature",
               "minStep": 0.1,
               "checkValue": true
             }
