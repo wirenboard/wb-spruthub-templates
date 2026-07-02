@@ -1,21 +1,55 @@
 {
   "manufacturer": "Wiren Board",
   "model": "DALI Gear",
-  "modelId": "/devices/([a-zA-Z0-9_-]+)/controls/go_to_scene/meta",
-  "name": "DALI лампа - сцена",
+  "modelIds": ["/devices/([a-zA-Z0-9_-]+)/controls/actual_level/meta"],
+  "name": "DALI лампа",
   "services": [
     {
-      "name": "Сцена",
-      "type": "SelectStatement",
+      "type": "Lightbulb",
       "characteristics": [
         {
-          "type": "SelectStatement",
+          "type": "Brightness",
           "link": [
             {
-              "type": "String",
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/actual_level",
+              "topicSet": "/devices/(1)/controls/wanted_level/on",
+              "scale": 1,
+              "maxValue": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Сцена",
+      "type": "C_Option",
+      "characteristics": [
+        {
+          "type": "C_Integer",
+          "link": [
+            {
+              "type": "Integer",
               "topicGet": "/devices/(1)/controls/go_to_scene",
               "topicSet": "/devices/(1)/controls/go_to_scene/on",
-              "enum_values": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15"]
+              "minValue": 0,
+              "maxValue": 15
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Ошибка балласта",
+      "visible": false,
+      "type": "ContactSensor",
+      "characteristics": [
+        {
+          "type": "ContactSensorState",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/error_status"
             }
           ]
         }
