@@ -1,7 +1,7 @@
 {
   "manufacturer": "Wiren Board",
   "model": "WB-DALI3",
-  "modelId": "/devices/(wb-dali_[0-9]{1,3})/controls/Input ([0-9])/meta",
+  "modelIds": ["/devices/(wb-dali_[0-9]{1,3})/controls/(input_[0-9])/meta"],
   "name": "Дискретный вход",
   "services": [
     {
@@ -14,7 +14,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Input (2)"
+              "topicGet": "/devices/(1)/controls/(2)"
             }
           ]
         }
@@ -30,7 +30,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Input (2) Counter"
+              "topicGet": "/devices/(1)/controls/(2)_counter"
             }
           ]
         }
@@ -46,7 +46,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Input (2) Single Press Counter"
+              "topicGet": "/devices/(1)/controls/(2)_single_press_counter"
             }
           ]
         }
@@ -62,7 +62,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Input (2) Long Press Counter"
+              "topicGet": "/devices/(1)/controls/(2)_long_press_counter"
             }
           ]
         }
@@ -78,7 +78,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Input (2) Double Press Counter"
+              "topicGet": "/devices/(1)/controls/(2)_double_press_counter"
             }
           ]
         }
@@ -94,7 +94,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/Input (2) Shortlong Press Counter"
+              "topicGet": "/devices/(1)/controls/(2)_shortlong_press_counter"
             }
           ]
         }

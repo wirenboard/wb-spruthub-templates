@@ -1,7 +1,7 @@
 {
   "manufacturer": "Wiren Board",
   "model": "DALI Gear",
-  "modelId": "/devices/([a-zA-Z0-9_-]+)/controls/wanted_level/meta",
+  "modelIds": ["/devices/([a-zA-Z0-9_-]+)/controls/error_status/meta"],
   "name": "DALI лампа",
   "services": [
     {
@@ -15,6 +15,24 @@
               "topicGet": "/devices/(1)/controls/actual_level",
               "topicSet": "/devices/(1)/controls/wanted_level/on",
               "maxValue": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Сцена",
+      "type": "C_Option",
+      "characteristics": [
+        {
+          "type": "C_Integer",
+          "link": [
+            {
+              "type": "Integer",
+              "topicGet": "/devices/(1)/controls/go_to_scene",
+              "topicSet": "/devices/(1)/controls/go_to_scene/on",
+              "minValue": 0,
+              "maxValue": 15
             }
           ]
         }

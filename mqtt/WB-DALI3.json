@@ -1,7 +1,7 @@
 {
   "manufacturer": "Wiren Board",
   "model": "WB-DALI3",
-  "modelId": "/devices/(wb-dali_[0-9]{1,3})/controls/Bus ([0-9]) State/meta",
+  "modelIds": ["/devices/(wb-dali_[0-9]{1,3})/controls/(bus_[0-9])_state/meta"],
   "name": "Шина DALI",
   "catalogId": 5986,
   "services": [
@@ -14,7 +14,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Bus (2) State"
+              "topicGet": "/devices/(1)/controls/(2)_state"
             }
           ]
         }
@@ -30,7 +30,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Bus (2) Powered"
+              "topicGet": "/devices/(1)/controls/(2)_powered"
             }
           ]
         }
@@ -46,7 +46,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Bus (2) Power Supply Status"
+              "topicGet": "/devices/(1)/controls/(2)_power_supply_status"
             }
           ]
         }
@@ -62,7 +62,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/Bus (2) Overheat"
+              "topicGet": "/devices/(1)/controls/(2)_overheat"
             }
           ]
         }

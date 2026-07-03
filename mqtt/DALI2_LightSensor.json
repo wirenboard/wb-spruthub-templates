@@ -1,7 +1,7 @@
 {
   "manufacturer": "Wiren Board",
   "model": "DALI-2 Light Sensor",
-  "modelId": "/devices/([a-zA-Z0-9_-]+_dali2_[0-9]+)/controls/illuminance([0-9]+)/meta",
+  "modelIds": ["/devices/([a-zA-Z0-9_-]+_dali2_[0-9]+)/controls/(illuminance)([0-9]+)/meta"],
   "name": "DALI-2 датчик освещённости",
   "services": [
     {
@@ -12,7 +12,7 @@
           "link": [
             {
               "type": "Double",
-              "topicGet": "/devices/(1)/controls/illuminance(2)",
+              "topicGet": "/devices/(1)/controls/(2)(3)",
               "checkValue": true
             }
           ]
