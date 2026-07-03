@@ -14,7 +14,6 @@
               "type": "Integer",
               "topicGet": "/devices/(1)/controls/actual_level",
               "topicSet": "/devices/(1)/controls/wanted_level/on",
-              "scale": 1,
               "maxValue": 100
             }
           ]
