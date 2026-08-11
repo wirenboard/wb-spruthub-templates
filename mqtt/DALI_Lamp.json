@@ -12,7 +12,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/actual_level",
+              "topicGet": "/devices/(1)/controls/wanted_level",
               "topicSet": "/devices/(1)/controls/wanted_level/on",
               "maxValue": 100
             }
