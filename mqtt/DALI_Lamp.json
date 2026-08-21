@@ -12,7 +12,7 @@
           "link": [
             {
               "type": "Integer",
-              "topicGet": "/devices/(1)/controls/actual_level",
+              "topicGet": "/devices/(1)/controls/wanted_level",
               "topicSet": "/devices/(1)/controls/wanted_level/on",
               "maxValue": 100
             }
@@ -28,13 +28,31 @@
           "type": "C_Integer",
           "link": [
             {
-              "type": "Integer",
+              "type": "String",
               "topicGet": "/devices/(1)/controls/go_to_scene",
-              "topicSet": "/devices/(1)/controls/go_to_scene/on",
-              "minValue": 0,
-              "maxValue": 15
+              "topicSet": "/devices/(1)/controls/go_to_scene/on"
             }
-          ]
+          ],
+          "data": {
+            "Option": {
+              "0": "Сцена 0",
+              "1": "Сцена 1",
+              "2": "Сцена 2",
+              "3": "Сцена 3",
+              "4": "Сцена 4",
+              "5": "Сцена 5",
+              "6": "Сцена 6",
+              "7": "Сцена 7",
+              "8": "Сцена 8",
+              "9": "Сцена 9",
+              "10": "Сцена 10",
+              "11": "Сцена 11",
+              "12": "Сцена 12",
+              "13": "Сцена 13",
+              "14": "Сцена 14",
+              "15": "Сцена 15"
+            }
+          }
         }
       ]
     },
